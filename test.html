@@ -2,342 +2,681 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Form</title>
 
-    <title>Service Search Dropdown</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body {
+            background: #f3f3f3;
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #f4f7fb;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .main-box {
+            max-width: 550px;
+            margin: 40px auto;
         }
 
-        /* MAIN WRAPPER */
+        .heading1 {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 700;
+            color: #16358b;
+            margin-bottom: 35px;
+        }
 
-        .service-search-container {
-            width: 460px;
+        /* =========================
+           DROPDOWN
+        ========================= */
+
+        .dropdown-wrapper {
             position: relative;
         }
 
-        /* SEARCH AREA */
-
-        .service-search-bar {
-            width: 100%;
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .service-search-icon {
-            margin-left: 10px;
-            color: #777;
-            font-size: 16px;
-        }
-
-        .service-search-input {
-            width: 100%;
-            border: none;
-            outline: none;
-            padding: 14px;
-            font-size: 16px;
-            background: transparent;
-        }
-
-        .service-search-button {
-            width: 55px;
-            height: 55px;
-            border: none;
+        .service-select {
+            border: 2px solid #d6d6d6;
             border-radius: 14px;
-            background: linear-gradient(135deg, #2563eb, #004cff);
-            color: white;
+            background: #fff;
+            padding: 16px 22px;
             cursor: pointer;
-            font-size: 18px;
         }
 
-        /* DROPDOWN */
-
-        .service-dropdown-menu {
-            position: absolute;
-            top: 85px;
-            left: 0;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 12px 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-
-            display: none;
-
-            z-index: 999;
-        }
-
-        /* DROPDOWN ITEM */
-
-        .service-dropdown-item {
+        .service-left {
             display: flex;
             align-items: center;
-            gap: 14px;
-            padding: 16px 0;
-            border-bottom: 1px solid #ececec;
+            gap: 18px;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: #f2f2f2;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .service-title {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .service-dropdown {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            border: 2px solid #d8d8d8;
+            max-height: 250px;
+            overflow-y: auto;
+            display: none;
+            z-index: 99;
+        }
+
+        .service-dropdown.show {
+            display: block;
+        }
+
+        .dropdown-item-custom {
+            padding: 15px 18px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            cursor: pointer;
+        }
+
+        .dropdown-item-custom:hover {
+            background: #f3f3f3;
+        }
+
+        .dropdown-item-custom.active {
+            background: #ececec;
+        }
+
+        .dropdown-item-custom h5 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           OPTIONS
+        ========================= */
+
+        .service-option {
+            border: 2px solid #d9d9d9;
+            border-radius: 14px;
+            background: #fff;
+            padding: 18px 22px;
+            margin-top: 18px;
             cursor: pointer;
             transition: 0.3s;
         }
 
-        .service-dropdown-item:last-child {
-            border-bottom: none;
+        .service-option.active {
+            border-color: #0d6efd;
+            background: #eef3ff;
         }
 
-        .service-dropdown-item:hover {
-            background: #f7f9ff;
-        }
-
-        /* ICON BOX */
-
-        .service-dropdown-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #7c3aed, #00c2ff);
+        .option-left {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            flex-shrink: 0;
+            gap: 18px;
         }
 
-        /* TEXT */
-
-        .service-dropdown-text {
-            font-size: 16px;
-            color: #222;
+        .option-title {
+            margin: 0;
+            font-size: 22px;
             font-weight: 500;
         }
 
-        /* NO RESULT */
+        /* =========================
+           BUTTON
+        ========================= */
 
-        .service-empty-message {
-            padding: 18px;
+        .btn-3d {
+            border: none;
+            background: #0d6efd;
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           GENDER CARD
+        ========================= */
+
+        .gender-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px 15px;
             text-align: center;
-            color: gray;
-            display: none;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gender-card.active-gender {
+            border-color: #0d6efd;
+            background: #eef3ff;
+        }
+
+        .gender-img {
+            width: 100px;
+            height: 100px;
+            background: #f2f2f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            margin: auto auto 15px;
+        }
+
+        .gender-card h4 {
+            font-size: 22px;
+            color: #16358b;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-group-custom {
+            margin-top: 18px;
+        }
+
+        .custom-input {
+            height: 58px;
+            border: 1px solid #cfd4dc;
+            font-size: 20px;
+            box-shadow: none !important;
+        }
+
+        .custom-textarea {
+            border: 1px solid #cfd4dc;
+            font-size: 20px;
+            box-shadow: none !important;
+        }
+
+        .country-code {
+            font-size: 22px;
         }
     </style>
+
 </head>
 
 <body>
 
-    <div class="service-search-container">
 
-        <!-- SEARCH BAR -->
+    <div class="container">
 
-        <div class="service-search-bar">
 
-            <i class="fa-solid fa-magnifying-glass service-search-icon"></i>
+        <!-- =========================
+             PAGE 1
+        ========================= -->
 
-            <input
-                type="text"
-                class="service-search-input"
-                id="serviceSearchInput"
-                placeholder="Search services..." />
+        <div class="main-box" id="page1">
 
-            <button class="service-search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <h3 class="heading1">
+                What Do You Want Your Maid To Do ?
+            </h3>
+            <!-- DROPDOWN -->
+            <div class="dropdown-wrapper">
+                <div class="service-select d-flex justify-content-between align-items-center" id="selectBox">
+                    <div class="service-left">
+                        <div class="service-icon" id="selectedIcon">
+                            🧹
+                        </div>
+                        <h4 class="service-title" id="selectedText">
+                            Maid
+                        </h4>
+                    </div>
+                    <i class="fa-solid fa-chevron-down" id="arrow"></i>
+                </div>
+
+                <!-- MENU -->
+                <div class="service-dropdown" id="dropdownMenu">
+                    <div class="dropdown-item-custom active">
+                        <div class="service-icon">🧹</div>
+                        <h5>Maid</h5>
+                    </div>
+                    <div class="dropdown-item-custom">
+                        <div class="service-icon">👨‍🍳</div>
+                        <h5>Cook</h5>
+
+                    </div>
+
+                    <div class="dropdown-item-custom">
+
+                        <div class="service-icon">👩‍🍼</div>
+                        <h5>Baby Sitter</h5>
+
+                    </div>
+
+                    <div class="dropdown-item-custom">
+
+                        <div class="service-icon">💆</div>
+                        <h5>Baby Massage</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPTIONS -->
+
+            <div class="service-option d-flex justify-content-between align-items-center">
+
+                <div class="option-left">
+
+                    <div class="service-icon">⏰</div>
+
+                    <h4 class="option-title">
+                        Urgent Need
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-option d-flex justify-content-between align-items-center">
+
+                <div class="option-left">
+
+                    <div class="service-icon">🐌</div>
+
+                    <h4 class="option-title">
+                        Needed Later
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-option active d-flex justify-content-between align-items-center">
+
+                <div class="option-left">
+
+                    <div class="service-icon">📋</div>
+
+                    <h4 class="option-title">
+                        I'm Just Planning
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEXT -->
+
+            <div class="text-center mt-4">
+
+                <button class="btn-3d" id="nextBtn">
+                    Next
+                </button>
+
+            </div>
 
         </div>
 
-        <!-- DROPDOWN -->
 
-        <div class="service-dropdown-menu" id="serviceDropdownMenu">
 
-            <!-- ITEM -->
+        <!-- =========================
+             PAGE 2
+        ========================= -->
 
-            <div class="service-dropdown-item">
+        <div class="main-box d-none" id="page2">
 
-                <div class="service-dropdown-icon">
-                    <i class="fa-solid fa-code"></i>
+            <h3 class="heading1">
+                Which Gender Do You Prefer?
+            </h3>
+
+
+            <div class="row g-3">
+
+                <div class="col-4">
+
+                    <div class="gender-card">
+
+                        <div class="gender-img">
+                            👨
+                        </div>
+
+                        <h4>Male</h4>
+
+                    </div>
+
                 </div>
 
-                <span class="service-dropdown-text">
-                    Web Development
-                </span>
+
+                <div class="col-4">
+
+                    <div class="gender-card active-gender">
+
+                        <div class="gender-img">
+                            👩
+                        </div>
+
+                        <h4>Female</h4>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-4">
+
+                    <div class="gender-card">
+
+                        <div class="gender-img">
+                            👨‍👩
+                        </div>
+
+                        <h4>Any</h4>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <!-- ITEM -->
 
-            <div class="service-dropdown-item">
+            <!-- BUTTONS -->
 
-                <div class="service-dropdown-icon">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                </div>
+            <div class="text-center mt-4 d-flex justify-content-center gap-3">
 
-                <span class="service-dropdown-text">
-                    Mobile App Development
-                </span>
+                <button class="btn-3d" id="prevBtn">
+                    Previous
+                </button>
 
-            </div>
-
-            <!-- ITEM -->
-
-            <div class="service-dropdown-item">
-
-                <div class="service-dropdown-icon">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                </div>
-
-                <span class="service-dropdown-text">
-                    UI/UX Design
-                </span>
-
-            </div>
-
-            <!-- ITEM -->
-
-            <div class="service-dropdown-item">
-
-                <div class="service-dropdown-icon">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-
-                <span class="service-dropdown-text">
-                    Cloud Solutions
-                </span>
-
-            </div>
-
-            <!-- NO RESULT -->
-
-            <div
-                class="service-empty-message"
-                id="serviceEmptyMessage">
-
-                No services found
+                <button class="btn-3d" id="genderNextBtn">
+                    Next
+                </button>
 
             </div>
 
         </div>
+
+
+
+        <!-- =========================
+             PAGE 3
+        ========================= -->
+
+        <div class="main-box d-none" id="page3">
+
+            <h3 class="heading1">
+                Enter Your Mobile No.
+            </h3>
+
+
+            <!-- MOBILE -->
+
+            <div class="form-group-custom">
+
+                <div class="input-group">
+
+                    <span class="input-group-text country-code">
+                        +91
+                    </span>
+
+                    <input type="text" class="form-control custom-input" placeholder="Enter Your Mobile No">
+
+                </div>
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <div class="form-group-custom">
+
+                <input type="text" class="form-control custom-input" placeholder="Enter Name">
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="form-group-custom">
+
+                <input type="text" class="form-control custom-input" placeholder="Enter Your Location">
+
+            </div>
+
+
+            <!-- HOURS -->
+
+            <div class="form-group-custom">
+
+                <input type="text" class="form-control custom-input" placeholder="How many hours do you need">
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group-custom">
+
+                <textarea rows="3" class="form-control custom-textarea" placeholder="Enter Message"></textarea>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="text-center mt-4 d-flex justify-content-center gap-3">
+
+                <button class="btn-3d" id="backBtn">
+                    Previous
+                </button>
+
+                <button class="btn-3d">
+                    Submit
+                </button>
+
+            </div>
+
+        </div>
+
 
     </div>
 
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
 
-        const searchInput =
-            document.getElementById("serviceSearchInput");
+        // =========================
+        // DROPDOWN
+        // =========================
+
+        const selectBox =
+            document.getElementById("selectBox");
 
         const dropdownMenu =
-            document.getElementById("serviceDropdownMenu");
+            document.getElementById("dropdownMenu");
 
-        const dropdownItems =
-            document.querySelectorAll(".service-dropdown-item");
-
-        const emptyMessage =
-            document.getElementById("serviceEmptyMessage");
+        const arrow =
+            document.getElementById("arrow");
 
 
-        // SHOW DROPDOWN
+        selectBox.addEventListener("click", () => {
 
-        searchInput.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("show");
 
-            dropdownMenu.style.display = "block";
+            if (dropdownMenu.classList.contains("show")) {
 
-        });
-
-
-        // SEARCH FILTER
-
-        searchInput.addEventListener("input", function () {
-
-            let inputValue =
-                this.value.toLowerCase();
-
-            let itemFound = false;
-
-            dropdownItems.forEach((item) => {
-
-                let itemText =
-                    item.innerText.toLowerCase();
-
-                if (itemText.includes(inputValue)) {
-
-                    item.style.display = "flex";
-
-                    itemFound = true;
-
-                } else {
-
-                    item.style.display = "none";
-
-                }
-
-            });
-
-            // EMPTY MESSAGE
-
-            if (itemFound) {
-
-                emptyMessage.style.display = "none";
+                arrow.classList.remove("fa-chevron-down");
+                arrow.classList.add("fa-chevron-up");
 
             } else {
 
-                emptyMessage.style.display = "block";
+                arrow.classList.remove("fa-chevron-up");
+                arrow.classList.add("fa-chevron-down");
 
             }
-
-            dropdownMenu.style.display = "block";
 
         });
 
 
+
+        // =========================
         // SELECT SERVICE
+        // =========================
 
-        dropdownItems.forEach((item) => {
+        const items =
+            document.querySelectorAll(".dropdown-item-custom");
 
-            item.addEventListener("click", () => {
 
-                let selectedText =
-                    item.querySelector(".service-dropdown-text").innerText;
+        items.forEach(item => {
 
-                searchInput.value = selectedText;
+            item.addEventListener("click", function () {
 
-                dropdownMenu.style.display = "none";
+                const icon =
+                    this.querySelector(".service-icon").innerHTML;
+
+                const text =
+                    this.querySelector("h5").innerText;
+
+
+                document.getElementById("selectedIcon")
+                    .innerHTML = icon;
+
+                document.getElementById("selectedText")
+                    .innerText = text;
+
+
+                items.forEach(el =>
+                    el.classList.remove("active")
+                );
+
+                this.classList.add("active");
+
+
+                dropdownMenu.classList.remove("show");
+
+                arrow.classList.remove("fa-chevron-up");
+                arrow.classList.add("fa-chevron-down");
 
             });
 
         });
 
 
-        // OUTSIDE CLICK
 
-        document.addEventListener("click", (e) => {
+        // =========================
+        // PAGE 1 -> PAGE 2
+        // =========================
 
-            if (
-                !e.target.closest(".service-search-container")
-            ) {
+        document.getElementById("nextBtn")
+            .addEventListener("click", function () {
 
-                dropdownMenu.style.display = "none";
+                document.getElementById("page1")
+                    .classList.add("d-none");
 
-            }
+                document.getElementById("page2")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // PAGE 2 -> PAGE 1
+        // =========================
+
+        document.getElementById("prevBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page2")
+                    .classList.add("d-none");
+
+                document.getElementById("page1")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // GENDER ACTIVE
+        // =========================
+
+        const genderCards =
+            document.querySelectorAll(".gender-card");
+
+
+        genderCards.forEach(card => {
+
+            card.addEventListener("click", function () {
+
+                genderCards.forEach(el =>
+                    el.classList.remove("active-gender")
+                );
+
+                this.classList.add("active-gender");
+
+            });
 
         });
+
+
+
+        // =========================
+        // PAGE 2 -> PAGE 3
+        // =========================
+
+        document.getElementById("genderNextBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page2")
+                    .classList.add("d-none");
+
+                document.getElementById("page3")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // PAGE 3 -> PAGE 2
+        // =========================
+
+        document.getElementById("backBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page3")
+                    .classList.add("d-none");
+
+                document.getElementById("page2")
+                    .classList.remove("d-none");
+
+            });
 
     </script>
 

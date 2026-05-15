@@ -1,116 +1,176 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
-    // SERVICE SEARCH DROPDOWN
-    // =========================
+// banner form home page
 
-    const serviceSearchField =
-        document.getElementById("serviceSearchInput");
+      // =========================
+        // DROPDOWN
+        // =========================
 
-    const serviceDropdownBox =
-        document.getElementById("serviceDropdownMenu");
+        const selectBox =
+            document.getElementById("selectBox");
 
-    const serviceDropdownOptions =
-        document.querySelectorAll(".service-dropdown-item");
+        const dropdownMenu =
+            document.getElementById("dropdownMenu");
 
-    const serviceNoDataMessage =
-        document.getElementById("serviceEmptyMessage");
+        const arrow =
+            document.getElementById("arrow");
 
-    if (
-        serviceSearchField &&
-        serviceDropdownBox &&
-        serviceNoDataMessage
-    ) {
 
-        // SHOW DROPDOWN
+        selectBox.addEventListener("click", () => {
 
-        serviceSearchField.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("show");
 
-            serviceDropdownBox.style.display = "block";
+            if (dropdownMenu.classList.contains("show")) {
 
-        });
-
-        // SEARCH FILTER
-
-        serviceSearchField.addEventListener("input", function () {
-
-            let serviceSearchValue =
-                this.value.toLowerCase();
-
-            let serviceMatched = false;
-
-            serviceDropdownOptions.forEach((serviceOption) => {
-
-                let serviceOptionText =
-                    serviceOption.innerText.toLowerCase();
-
-                if (serviceOptionText.includes(serviceSearchValue)) {
-
-                    serviceOption.style.display = "flex";
-
-                    serviceMatched = true;
-
-                } else {
-
-                    serviceOption.style.display = "none";
-
-                }
-
-            });
-
-            // NO RESULT MESSAGE
-
-            if (serviceMatched) {
-
-                serviceNoDataMessage.style.display = "none";
+                arrow.classList.remove("fa-chevron-down");
+                arrow.classList.add("fa-chevron-up");
 
             } else {
 
-                serviceNoDataMessage.style.display = "block";
+                arrow.classList.remove("fa-chevron-up");
+                arrow.classList.add("fa-chevron-down");
 
             }
 
-            serviceDropdownBox.style.display = "block";
-
         });
 
+
+
+        // =========================
         // SELECT SERVICE
+        // =========================
 
-        serviceDropdownOptions.forEach((serviceOption) => {
+        const items =
+            document.querySelectorAll(".dropdown-item-custom");
 
-            serviceOption.addEventListener("click", () => {
 
-                let textElement =
-                    serviceOption.querySelector(".service-dropdown-text");
+        items.forEach(item => {
 
-                if (textElement) {
+            item.addEventListener("click", function () {
 
-                    serviceSearchField.value =
-                        textElement.innerText;
+                const icon =
+                    this.querySelector(".service-icon").innerHTML;
 
-                }
+                const text =
+                    this.querySelector("h5").innerText;
 
-                serviceDropdownBox.style.display = "none";
+
+                document.getElementById("selectedIcon")
+                    .innerHTML = icon;
+
+                document.getElementById("selectedText")
+                    .innerText = text;
+
+
+                items.forEach(el =>
+                    el.classList.remove("active")
+                );
+
+                this.classList.add("active");
+
+
+                dropdownMenu.classList.remove("show");
+
+                arrow.classList.remove("fa-chevron-up");
+                arrow.classList.add("fa-chevron-down");
 
             });
 
         });
 
-        // OUTSIDE CLICK
 
-        document.addEventListener("click", (event) => {
 
-            if (
-                !event.target.closest(".service-search-container")
-            ) {
+        // =========================
+        // PAGE 1 -> PAGE 2
+        // =========================
 
-                serviceDropdownBox.style.display = "none";
+        document.getElementById("nextBtn")
+            .addEventListener("click", function () {
 
-            }
+                document.getElementById("page1")
+                    .classList.add("d-none");
+
+                document.getElementById("page2")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // PAGE 2 -> PAGE 1
+        // =========================
+
+        document.getElementById("prevBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page2")
+                    .classList.add("d-none");
+
+                document.getElementById("page1")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // GENDER ACTIVE
+        // =========================
+
+        const genderCards =
+            document.querySelectorAll(".gender-card");
+
+
+        genderCards.forEach(card => {
+
+            card.addEventListener("click", function () {
+
+                genderCards.forEach(el =>
+                    el.classList.remove("active-gender")
+                );
+
+                this.classList.add("active-gender");
+
+            });
 
         });
 
-    }
+
+
+        // =========================
+        // PAGE 2 -> PAGE 3
+        // =========================
+
+        document.getElementById("genderNextBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page2")
+                    .classList.add("d-none");
+
+                document.getElementById("page3")
+                    .classList.remove("d-none");
+
+            });
+
+
+
+        // =========================
+        // PAGE 3 -> PAGE 2
+        // =========================
+
+        document.getElementById("backBtn")
+            .addEventListener("click", function () {
+
+                document.getElementById("page3")
+                    .classList.add("d-none");
+
+                document.getElementById("page2")
+                    .classList.remove("d-none");
+
+            });
+
+// banner form home page ============================================================================
 
 
 // =========================

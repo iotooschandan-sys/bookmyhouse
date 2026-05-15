@@ -1204,9 +1204,10 @@ img.google-icon {
 }
 
 .video-sec {
-  background: linear-gradient(135deg, #eef2ff, #f8fbff);
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(135deg, #eef2ff, #f8fbff);
+    position: relative;
+    overflow: hidden;
+    border-radius: 90px 90px 0 0;
 }
 .video-sec .swiper-button-prev, .video-sec .swiper-button-next {
     background: white;
@@ -1995,6 +1996,7 @@ img.google-icon {
 section.faq-section .container-fluid {
     padding: 0 60px;
 }
+
 
 .work-process-subtitle{
   color:#ff5b4a;
