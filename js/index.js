@@ -170,6 +170,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
 
+            // =========================
+// SERVICE OPTION ACTIVE
+// =========================
+
+const serviceOptions =
+document.querySelectorAll(".service-option");
+
+
+serviceOptions.forEach(option => {
+
+    option.addEventListener("click", function(){
+
+        // REMOVE ACTIVE FROM ALL
+
+        serviceOptions.forEach(el =>
+            el.classList.remove("active")
+        );
+
+        // ADD ACTIVE TO CLICKED
+
+        this.classList.add("active");
+
+    });
+
+});
+
 // banner form home page ============================================================================
 
 

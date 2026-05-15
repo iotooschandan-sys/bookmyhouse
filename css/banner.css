@@ -527,34 +527,38 @@ body{
        SERVICE SELECT
     ======================= */
 
-    .service-select{
-      border:2px solid #cfcfcf;
-      border-radius:14px;
-      background:#fff;
-      padding:10px;
-      cursor:pointer;
-      position:relative;
-      z-index:99;
-    }
-
+.service-select {
+    padding: 12px 25px;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    outline: 0;
+    font-size: 16px;
+    border: 1px solid #e4e4e4;
+    color: #7c898d;
+    line-height: inherit;
+    word-break: normal;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+}
     .service-left{
       display:flex;
       align-items:center;
       gap:18px;
     }
 .service-icon {
-    width: 37px;
-    height: 38px;
+    width: 30px;
+    height: 33px;
     background: #f2f2f2;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
 }
-
     .service-title{
-      font-size:22px;
+      font-size:16px;
       font-weight:500;
       margin:0;
     }
@@ -607,7 +611,7 @@ body{
 
 .dropdown-item-custom h5 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -616,18 +620,25 @@ body{
     ======================= */
 
 .service-option {
-    border: 2px solid #d9d9d9;
-    border-radius: 14px;
-    background: #fff;
-    padding: 10px;
-    margin-top: 14px;
+    padding: 12px 25px;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    outline: 0;
+    font-size: 16px;
+    border: 1px solid #e4e4e4;
+    color: #7c898d;
+    line-height: inherit;
+    word-break: normal;
+    -webkit-transition: .3s;
+    transition: .3s;
+    margin-top: 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 
     .service-option.active{
-      border-color:#1f6dff;
+      border-color:#2caac1;
       background:#eef3ff;
     }
 
@@ -639,7 +650,7 @@ body{
 
     .option-title{
       margin:0;
-      font-size:18px;
+      font-size:16px;
       font-weight:500;
     }
 
@@ -662,18 +673,16 @@ body{
       border-radius:10px;
     }
 
-.main-box-form{
+.main-box-form {
     background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    height: 520px;
-    width: 514px;
+    padding: 60px;
+    border-radius: 10px;
+    height: 542px;
+    width: 468px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
     position: absolute;
     right: 0;
-    top: -97px;
-
+    top: -124px;
     z-index: 999;
 }
 
@@ -684,13 +693,14 @@ body{
 .gender-card {
     background: #fff;
     border-radius: 14px;
-    padding: 25px 8px;
+    padding: 10px 6px;
     text-align: center;
     border: 2px solid transparent;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 14px;
 }
+
         .gender-card.active-gender {
             border-color: #2caac1;
             background: #eef3ff;
@@ -709,8 +719,8 @@ body{
 }
 
         .gender-card h4 {
-            font-size: 22px;
-            color: #16358b;
+            font-size: 18px;
+            color: #2caac1;
             margin: 0;
             font-weight: 600;
         }
