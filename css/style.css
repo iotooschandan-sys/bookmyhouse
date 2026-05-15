@@ -626,7 +626,7 @@ li.dropdown {
 }
 .cta-cont h5 {
     color: #fff;
-    margin-bottom: 25px;
+    margin-top: 25px;
 }
 .cta-cont h4 {
     color: #fff;
@@ -672,6 +672,7 @@ li.dropdown {
 }
 .rating-box p {
     padding-left: 56px;
+    font-weight: bold;
 }
 .video-sec .swiper-wrapper{
   padding-bottom: 60px;
@@ -1109,7 +1110,7 @@ img.google-icon {
 .cta-box {
   background: #221f3c;
   border-radius: 16px;
-  padding: 45px 60px;
+  padding: 45px 20px;
 
   display: flex;
   justify-content: space-between;
@@ -1526,7 +1527,6 @@ img.google-icon {
 
 .stats-box {
     width: 100%;
-    max-width: 1100px;
     margin: auto;
     /* background: linear-gradient(90deg,#14b6d4,#27b9c7); */
     background: #2caac1;
@@ -1541,8 +1541,6 @@ img.google-icon {
     position: absolute;
     top: -158px;
     display: flex;
-    left: 50%;
-    transform: translate(-50%, 10px);
 }
 
 .stats-box:hover{
@@ -1988,6 +1986,14 @@ img.google-icon {
 .work-process-area{
   background:#f5f4f2;
   position:relative;
+    padding-bottom: 145px;
+}
+
+.hw-btn .btn-3d:hover {
+    color: #fff !important;
+}
+section.faq-section .container-fluid {
+    padding: 0 60px;
 }
 
 .work-process-subtitle{
@@ -2637,4 +2643,199 @@ img.google-icon {
     margin:0;
 
     color:rgba(255,255,255,0.95);
+}
+/* ===============================
+   SMOOTH GLOBAL TRANSITIONS
+================================= */
+
+.zx-blog-item,
+.zx-team-card,
+.zx-center-box,
+.zx-blog-thumb,
+.zx-team-photo,
+.zx-blog-heading,
+.zx-blog-text,
+.zx-team-name,
+.zx-team-role,
+.zx-call-action,
+.zx-list-box li,
+.zx-social-links a,
+.zx-view-btn{
+    transition: all .4s ease;
+}
+
+
+/* ===============================
+   BLOG ITEM HOVER
+================================= */
+
+.zx-blog-item{
+    display:flex;
+    gap:18px;
+    padding:18px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.zx-blog-item:hover{
+    background:#ffffff;
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.zx-blog-item:hover .zx-blog-thumb{
+    transform:scale(1.06);
+}
+
+.zx-blog-item:hover .zx-blog-heading{
+    color:#1aa9c8;
+}
+
+.zx-blog-item:hover .zx-blog-text{
+    color:#111;
+}
+
+
+/* ===============================
+   BLOG IMAGE
+================================= */
+
+.zx-blog-thumb{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+
+/* ===============================
+   CENTER BOX HOVER
+================================= */
+
+.zx-center-box{
+    position:relative;
+    overflow:hidden;
+    transition:all .5s ease;
+}
+
+.zx-center-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.zx-center-box:hover .zx-center-image{
+    transform:scale(1.05);
+}
+
+.zx-center-image{
+    transition:all .5s ease;
+}
+
+
+/* ===============================
+   LIST ITEMS
+================================= */
+
+.zx-list-box li{
+    cursor:pointer;
+}
+
+.zx-list-box li:hover{
+    transform:translateX(8px);
+}
+
+
+/* ===============================
+   CALL BUTTON
+================================= */
+
+.zx-call-action:hover{
+    background:#2caac1;
+    color:#fff !important;
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(13,110,253,.3);
+}
+
+
+/* ===============================
+   TEAM CARD
+================================= */
+
+.zx-team-card{
+    padding-bottom:20px;
+    border-radius:22px;
+    background:#fff;
+    text-align:center;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.zx-team-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.zx-team-card:hover .zx-team-photo{
+    transform:scale(1.08);
+}
+
+.zx-team-card:hover .zx-team-name{
+    color:#2caac1;
+}
+
+.zx-team-card:hover .zx-team-role{
+    color:#111;
+}
+
+
+/* ===============================
+   TEAM IMAGE
+================================= */
+
+.zx-team-photo{
+    width:100%;
+    border-radius:18px;
+    transition:all .5s ease;
+}
+
+
+/* ===============================
+   SOCIAL ICONS
+================================= */
+
+.zx-social-links a{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#f3f5f7;
+    color:#111;
+    text-decoration:none;
+    margin:0 4px;
+}
+
+.zx-social-links a:hover{
+    background:#2caac1;
+  color:#fff !important;
+    transform:translateY(-4px) scale(1.08);
+}
+
+
+/* ===============================
+   VIEW BUTTON
+================================= */
+
+.zx-view-btn:hover{
+    transform:translateY(-3px);
+    color: #ff6b6b !important;
+
+}
+
+
+.hw-btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 24px);
 }

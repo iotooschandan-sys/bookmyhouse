@@ -112,53 +112,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // =========================
-    // CARD SLIDER
-    // =========================
 
-    const cards = document.querySelectorAll(".card");
-    const flags = document.querySelectorAll(".flag");
+// =========================
+//  CARDS
+// =========================
 
-    if (cards.length > 0 && flags.length > 0) {
+const cards = document.querySelectorAll(".card");
+const flags = document.querySelectorAll(".flag");
 
-        let active = 0;
+let active = 0;
 
-        function updateCards() {
+// =========================
+// UPDATE CARDS
+// =========================
 
-            cards.forEach(card => {
-                card.classList.remove("active", "prev", "next");
-            });
+function updateCards() {
 
-            flags.forEach(flag => {
-                flag.classList.remove("active");
-            });
+    cards.forEach(card => {
+        card.classList.remove("active", "prev", "next");
+    });
 
-            const prev =
-                (active - 1 + cards.length) % cards.length;
+    flags.forEach(flag => {
+        flag.classList.remove("active");
+    });
 
-            const next =
-                (active + 1) % cards.length;
+    const prev =
+        (active - 1 + cards.length) % cards.length;
 
-            cards[active].classList.add("active");
-            cards[prev].classList.add("prev");
-            cards[next].classList.add("next");
+    const next =
+        (active + 1) % cards.length;
 
-            flags[active].classList.add("active");
-        }
+    // active card
+    cards[active].classList.add("active");
+
+    // prev card
+    cards[prev].classList.add("prev");
+
+    // next card
+    cards[next].classList.add("next");
+
+    // active flag
+    if(flags[active]){
+        flags[active].classList.add("active");
+    }
+}
+
+updateCards();
+
+
+// =========================
+// FLAG CLICK
+// =========================
+
+flags.forEach((flag, index) => {
+
+    flag.addEventListener("click", () => {
+
+        active = index;
 
         updateCards();
 
-        setInterval(() => {
+    });
 
-            active =
-                (active + 1) % cards.length;
+});
 
-            updateCards();
 
-        }, 3000);
+// =========================
+// CARD IMAGE CLICK
+// =========================
 
-    }
+cards.forEach((card, index) => {
 
+    const img = card.querySelector("img");
+
+    img.addEventListener("click", () => {
+
+        active = index;
+
+        updateCards();
+
+    });
+
+});
+
+
+// =========================
+// AUTO SLIDE
+// =========================
+
+setInterval(() => {
+
+    active = (active + 1) % cards.length;
+
+    updateCards();
+
+}, 3000);
     // =========================
     // TESTIMONIAL SWIPER
     // =========================
