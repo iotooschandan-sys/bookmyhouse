@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Service Search Dropdown</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* MAIN WRAPPER */
+
+        .service-search-container {
+            width: 460px;
+            position: relative;
+        }
+
+        /* SEARCH AREA */
+
+        .service-search-bar {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-search-icon {
+            margin-left: 10px;
+            color: #777;
+            font-size: 16px;
+        }
+
+        .service-search-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 14px;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        .service-search-button {
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #2563eb, #004cff);
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* DROPDOWN */
+
+        .service-dropdown-menu {
+            position: absolute;
+            top: 85px;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 12px 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+            display: none;
+
+            z-index: 999;
+        }
+
+        /* DROPDOWN ITEM */
+
+        .service-dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid #ececec;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-dropdown-item:hover {
+            background: #f7f9ff;
+        }
+
+        /* ICON BOX */
+
+        .service-dropdown-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #7c3aed, #00c2ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* TEXT */
+
+        .service-dropdown-text {
+            font-size: 16px;
+            color: #222;
+            font-weight: 500;
+        }
+
+        /* NO RESULT */
+
+        .service-empty-message {
+            padding: 18px;
+            text-align: center;
+            color: gray;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="service-search-container">
+
+        <!-- SEARCH BAR -->
+
+        <div class="service-search-bar">
+
+            <i class="fa-solid fa-magnifying-glass service-search-icon"></i>
+
+            <input
+                type="text"
+                class="service-search-input"
+                id="serviceSearchInput"
+                placeholder="Search services..." />
+
+            <button class="service-search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <!-- DROPDOWN -->
+
+        <div class="service-dropdown-menu" id="serviceDropdownMenu">
+
+            <!-- ITEM -->
+
+            <div class="service-dropdown-item">
+
+                <div class="service-dropdown-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <span class="service-dropdown-text">
+                    Web Development
+                </span>
+
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="service-dropdown-item">
+
+                <div class="service-dropdown-icon">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+
+                <span class="service-dropdown-text">
+                    Mobile App Development
+                </span>
+
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="service-dropdown-item">
+
+                <div class="service-dropdown-icon">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+
+                <span class="service-dropdown-text">
+                    UI/UX Design
+                </span>
+
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="service-dropdown-item">
+
+                <div class="service-dropdown-icon">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+
+                <span class="service-dropdown-text">
+                    Cloud Solutions
+                </span>
+
+            </div>
+
+            <!-- NO RESULT -->
+
+            <div
+                class="service-empty-message"
+                id="serviceEmptyMessage">
+
+                No services found
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const searchInput =
+            document.getElementById("serviceSearchInput");
+
+        const dropdownMenu =
+            document.getElementById("serviceDropdownMenu");
+
+        const dropdownItems =
+            document.querySelectorAll(".service-dropdown-item");
+
+        const emptyMessage =
+            document.getElementById("serviceEmptyMessage");
+
+
+        // SHOW DROPDOWN
+
+        searchInput.addEventListener("click", () => {
+
+            dropdownMenu.style.display = "block";
+
+        });
+
+
+        // SEARCH FILTER
+
+        searchInput.addEventListener("input", function () {
+
+            let inputValue =
+                this.value.toLowerCase();
+
+            let itemFound = false;
+
+            dropdownItems.forEach((item) => {
+
+                let itemText =
+                    item.innerText.toLowerCase();
+
+                if (itemText.includes(inputValue)) {
+
+                    item.style.display = "flex";
+
+                    itemFound = true;
+
+                } else {
+
+                    item.style.display = "none";
+
+                }
+
+            });
+
+            // EMPTY MESSAGE
+
+            if (itemFound) {
+
+                emptyMessage.style.display = "none";
+
+            } else {
+
+                emptyMessage.style.display = "block";
+
+            }
+
+            dropdownMenu.style.display = "block";
+
+        });
+
+
+        // SELECT SERVICE
+
+        dropdownItems.forEach((item) => {
+
+            item.addEventListener("click", () => {
+
+                let selectedText =
+                    item.querySelector(".service-dropdown-text").innerText;
+
+                searchInput.value = selectedText;
+
+                dropdownMenu.style.display = "none";
+
+            });
+
+        });
+
+
+        // OUTSIDE CLICK
+
+        document.addEventListener("click", (e) => {
+
+            if (
+                !e.target.closest(".service-search-container")
+            ) {
+
+                dropdownMenu.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
