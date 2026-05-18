@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Footer Design</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Voice Record Popup</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -15,243 +12,317 @@
 
   <style>
 
-    body{
+    *{
       margin:0;
-      font-family:Arial, sans-serif;
-      background:#f5f5f5;
-    }
-
-    .footer{
-      background:#05256d;
-      color:#fff;
-      padding-top:50px;
-    }
-
-    .footer h5{
-      font-size:18px;
-      font-weight:700;
-      margin-bottom:20px;
-      text-transform:uppercase;
-    }
-
-    .footer p{
-      color:#d6d6d6;
-      line-height:1.7;
-      font-size:15px;
-    }
-
-    .footer ul{
       padding:0;
-      list-style:none;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
     }
 
-    .footer ul li{
-      margin-bottom:12px;
-    }
-
-    .footer ul li a{
-      color:#d6d6d6;
-      text-decoration:none;
-      transition:0.3s;
-      font-size:15px;
-    }
-
-    .footer ul li a:hover{
-      color:#fff;
-      padding-left:5px;
-    }
-
-    .footer-border{
-      border-right:1px solid rgba(255,255,255,0.2);
-    }
-
-    .social-icons{
+    body{
+      height:100vh;
       display:flex;
-      gap:12px;
-      margin-top:20px;
-    }
-
-    .social-icons a{
-      width:40px;
-      height:40px;
-      border:1px solid rgba(255,255,255,0.3);
-      border-radius:50%;
-      display:flex;
-      align-items:center;
       justify-content:center;
-      color:#fff;
-      text-decoration:none;
-      transition:0.3s;
+      align-items:center;
+      background:#f3f4f6;
     }
 
-    .social-icons a:hover{
+    /* Main Button */
+
+    .job-btn{
+      padding:18px 35px;
+      border:none;
+      border-radius:50px;
+      background:#0b1b4d;
+      color:#fff;
+      font-size:22px;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .job-btn:hover{
       background:#25D366;
-      border-color:#25D366;
       transform:translateY(-3px);
     }
 
-    .contact-info li{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
+    /* Popup */
+
+    .popup{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:999;
     }
 
-    .contact-info i{
-      margin-top:4px;
-      color:#fff;
+    .popup-box{
+      width:90%;
+      max-width:450px;
+      background:#fff;
+      border-radius:24px;
+      padding:35px;
+      text-align:center;
+      animation:popup 0.4s ease;
     }
 
-    .bottom-footer{
-      border-top:1px solid rgba(255,255,255,0.2);
-      margin-top:40px;
-      padding:18px 0;
-      font-size:14px;
-      color:#d6d6d6;
-    }
+    @keyframes popup{
 
-    .bottom-footer a{
-      color:#d6d6d6;
-      text-decoration:none;
-      margin-left:18px;
-    }
+      from{
+        opacity:0;
+        transform:scale(0.7);
+      }
 
-    .bottom-footer a:hover{
-      color:#fff;
-    }
-
-    @media(max-width:768px){
-
-      .footer-border{
-        border-right:none;
-        border-bottom:1px solid rgba(255,255,255,0.2);
-        padding-bottom:25px;
-        margin-bottom:25px;
+      to{
+        opacity:1;
+        transform:scale(1);
       }
 
     }
 
+    .popup-box h2{
+      margin-bottom:25px;
+      color:#0b1b4d;
+      font-size:30px;
+    }
+
+    /* Buttons Area */
+
+    .btn-area{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      margin-bottom:25px;
+    }
+
+    /* Record Button */
+
+    .record-btn{
+      width:90px;
+      height:90px;
+      border:none;
+      border-radius:50%;
+      background:#ff3b30;
+      color:#fff;
+      font-size:34px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .record-btn:hover{
+      transform:scale(1.08);
+    }
+
+    /* Stop Button */
+
+    .stop-btn{
+      width:90px;
+      height:90px;
+      border:none;
+      border-radius:50%;
+      background:#0b1b4d;
+      color:#fff;
+      font-size:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .stop-btn:hover{
+      transform:scale(1.08);
+      background:#111827;
+    }
+
+    /* Recording Animation */
+
+    .recording{
+      animation:pulse 1s infinite;
+    }
+
+    @keyframes pulse{
+
+      0%{
+        box-shadow:0 0 0 0 rgba(255,59,48,0.7);
+      }
+
+      70%{
+        box-shadow:0 0 0 20px rgba(255,59,48,0);
+      }
+
+      100%{
+        box-shadow:0 0 0 0 rgba(255,59,48,0);
+      }
+
+    }
+
+    /* Text Area */
+
+    textarea{
+      width:100%;
+      height:140px;
+      border:2px solid #ddd;
+      border-radius:14px;
+      padding:16px;
+      resize:none;
+      outline:none;
+      font-size:16px;
+      margin-bottom:20px;
+    }
+
+    textarea:focus{
+      border-color:#25D366;
+    }
+
+    /* Close Button */
+
+    .close-btn{
+      padding:14px 30px;
+      border:none;
+      border-radius:12px;
+      background:#0b1b4d;
+      color:#fff;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .close-btn:hover{
+      background:#25D366;
+    }
+
   </style>
+
 </head>
 <body>
 
-  <footer class="footer">
+  <!-- Main Button -->
 
-    <div class="container">
+  <button class="job-btn" id="openPopup">
+    Looking For A Job
+  </button>
 
-      <div class="row g-4">
+  <!-- Popup -->
 
-        <!-- About -->
-        <div class="col-lg-3 col-md-6 footer-border">
+  <div class="popup" id="popup">
 
-          <h5>Book My House Maid</h5>
+    <div class="popup-box">
 
-          <p>
-            We provide verified and experienced maids,
-            caretakers, babysitters, cooks & more for your home.
-          </p>
+      <h2>Record Your Voice</h2>
 
-          <div class="social-icons">
+      <!-- Record + Stop Buttons -->
 
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <div class="btn-area">
 
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <button class="record-btn" id="recordBtn">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
 
-            <a href="#"><i class="fab fa-youtube"></i></a>
-
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-          </div>
-
-        </div>
-
-        <!-- Services -->
-        <div class="col-lg-3 col-md-6 footer-border">
-
-          <h5>Services</h5>
-
-          <ul>
-            <li><a href="#">Full-Time Maid</a></li>
-            <li><a href="#">Live-In Maid</a></li>
-            <li><a href="#">Japa Maid</a></li>
-            <li><a href="#">Baby Care</a></li>
-            <li><a href="#">Elder Care</a></li>
-            <li><a href="#">Cook Services</a></li>
-          </ul>
-
-        </div>
-
-        <!-- Locations -->
-        <div class="col-lg-3 col-md-6 footer-border">
-
-          <h5>Locations</h5>
-
-          <ul>
-            <li><a href="#">Delhi</a></li>
-            <li><a href="#">Gurgaon</a></li>
-            <li><a href="#">Noida</a></li>
-            <li><a href="#">Ghaziabad</a></li>
-            <li><a href="#">Faridabad</a></li>
-            <li><a href="#">South Delhi</a></li>
-          </ul>
-
-        </div>
-
-        <!-- Contact -->
-        <div class="col-lg-3 col-md-6">
-
-          <h5>Contact Us</h5>
-
-          <ul class="contact-info">
-
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <span>+91 9811 600 201</span>
-            </li>
-
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span>info@bookmyhousemaid.com</span>
-            </li>
-
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>
-                B-123, Sector 6, Noida,
-                Uttar Pradesh - 201301
-              </span>
-            </li>
-
-          </ul>
-
-        </div>
+        <button class="stop-btn" id="stopBtn">
+          <i class="fa-solid fa-stop"></i>
+        </button>
 
       </div>
 
-      <!-- Bottom Footer -->
+      <!-- Text Output -->
 
-      <div class="bottom-footer">
+      <textarea id="messageBox"
+      placeholder="Your voice text will appear here..."></textarea>
 
-        <div class="row align-items-center">
+      <!-- Close -->
 
-          <div class="col-md-6 text-center text-md-start">
-            © 2024 Book My House Maid. All Rights Reserved.
-          </div>
-
-          <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms & Conditions</a>
-
-          </div>
-
-        </div>
-
-      </div>
+      <button class="close-btn" id="closePopup">
+        Close
+      </button>
 
     </div>
 
-  </footer>
+  </div>
+
+  <script>
+
+    const popup = document.getElementById("popup");
+    const openPopup = document.getElementById("openPopup");
+    const closePopup = document.getElementById("closePopup");
+
+    const recordBtn = document.getElementById("recordBtn");
+    const stopBtn = document.getElementById("stopBtn");
+
+    const messageBox = document.getElementById("messageBox");
+
+    let recognition;
+
+    // Open Popup
+
+    openPopup.onclick = () => {
+
+      popup.style.display = "flex";
+
+    };
+
+    // Close Popup
+
+    closePopup.onclick = () => {
+
+      popup.style.display = "none";
+
+    };
+
+    // Speech Recognition
+
+    if ('webkitSpeechRecognition' in window) {
+
+      recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = true;
+
+      recognition.interimResults = true;
+
+      recognition.lang = "en-US";
+
+      recognition.onresult = function(event){
+
+        let transcript = '';
+
+        for(let i = event.resultIndex;
+            i < event.results.length;
+            i++){
+
+          transcript += event.results[i][0].transcript;
+
+        }
+
+        messageBox.value = transcript;
+
+      };
+
+    }
+
+    // Start Recording
+
+    recordBtn.onclick = () => {
+
+      recognition.start();
+
+      recordBtn.classList.add("recording");
+
+    };
+
+    // Stop Recording
+
+    stopBtn.onclick = () => {
+
+      recognition.stop();
+
+      recordBtn.classList.remove("recording");
+
+    };
+
+  </script>
 
 </body>
 </html>

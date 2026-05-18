@@ -77,14 +77,6 @@
                             <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
                             <li class="dropdown">
                                 Services <i class="fa-solid fa-angle-down"></i>
-                                <!-- <ul class="submenu">
-                                    <li>Baby Sitter</li>
-                                    <li>Home Cook</li>
-                                    <li>House Keeper</li>
-                                    <li><a href="">ElderCare</a></li>
-                                    <li><a href="">Ward Boy</a></li>
-                                </ul> -->
-
                                 <div class="sb-menu">
                                     <div class="row">
                                         <div class="col-md-5">
@@ -95,11 +87,49 @@
                                                 <li><i class="fa-solid fa-hand-holding-heart"></i> ElderCare</li>
                                                 <li><i class="fa-solid fa-user-doctor"></i>Ward Boy</li>
                                             </ul>
+
+                                            <div>
+                                                <button class="btn-3d v" id="openPopup">Looking For A Job</button>
+                                                <div class="popup" id="popup">
+
+                                                    <div class="popup-box">
+
+                                                        <h3>Record Your Voice</h3>
+
+                                                        <!-- Record + Stop Buttons -->
+
+                                                        <div class="btn-area">
+
+                                                            <button class="record-btn" id="recordBtn">
+                                                                <i class="fa-solid fa-microphone"></i>
+                                                            </button>
+
+                                                            <button class="stop-btn" id="stopBtn">
+                                                                <i class="fa-solid fa-stop"></i>
+                                                            </button>
+
+                                                        </div>
+
+                                                        <!-- Text Output -->
+
+                                                        <textarea id="messageBox"
+                                                            placeholder="Your voice text will appear here..."></textarea>
+
+                                                        <!-- Close -->
+
+                                                        <button class="btn-3d" id="closePopup">
+                                                            Close
+                                                        </button>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="col-md-7">
                                             <form class="service-form">
-
+                                                
                                                 <h3>Request A Quote Now</h3>
 
                                                 <div class="input-group">
@@ -1132,7 +1162,7 @@
                 </div>
 
                 <div class="text-center mt-lg-5 mt-4">
-                    <button class="btn-3d px-4" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                    <button class="btn-3d px-4">
                         <i class="fa-solid fa-pen-to-square"></i> Give Review
                     </button>
                 </div>
@@ -2025,43 +2055,6 @@
 
 
 
-
-    <!-- REview Modal -->
-    <div class="modal fade z-2" id="reviewModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content review-modal">
-
-                <div class="modal-header border-0">
-                    <h5 class="modal-title">Leave a Review</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <div class="modal-body">
-
-                    <!-- Rating -->
-                    <div class="rating mb-3 text-center">
-                        <i class="fa-solid fa-star" data-value="1"></i>
-                        <i class="fa-solid fa-star" data-value="2"></i>
-                        <i class="fa-solid fa-star" data-value="3"></i>
-                        <i class="fa-solid fa-star" data-value="4"></i>
-                        <i class="fa-solid fa-star" data-value="5"></i>
-                    </div>
-
-                    <!-- Form -->
-                    <form>
-                        <input type="text" class="form-control mb-3" placeholder="Your Name">
-                        <textarea class="form-control mb-3" rows="3" placeholder="Write your review..."></textarea>
-
-                        <button type="submit" class="btn btn-submit w-100">
-                            Submit Review
-                        </button>
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <!-- js bundle -->
 

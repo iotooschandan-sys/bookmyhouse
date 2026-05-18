@@ -514,3 +514,85 @@ serviceOptions.forEach(option => {
     }
 
 });
+
+
+
+// /==================== Audio js header =======/
+
+const popup = document.getElementById("popup");
+    const openPopup = document.getElementById("openPopup");
+    const closePopup = document.getElementById("closePopup");
+
+    const recordBtn = document.getElementById("recordBtn");
+    const stopBtn = document.getElementById("stopBtn");
+
+    const messageBox = document.getElementById("messageBox");
+
+    let recognition;
+
+    // Open Popup
+
+    openPopup.onclick = () => {
+
+      popup.style.display = "flex";
+
+    };
+
+    // Close Popup
+
+    closePopup.onclick = () => {
+
+      popup.style.display = "none";
+
+    };
+
+    // Speech Recognition
+
+    if ('webkitSpeechRecognition' in window) {
+
+      recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = true;
+
+      recognition.interimResults = true;
+
+      recognition.lang = "en-US";
+
+      recognition.onresult = function(event){
+
+        let transcript = '';
+
+        for(let i = event.resultIndex;
+            i < event.results.length;
+            i++){
+
+          transcript += event.results[i][0].transcript;
+
+        }
+
+        messageBox.value = transcript;
+
+      };
+
+    }
+
+    // Start Recording
+
+    recordBtn.onclick = () => {
+
+      recognition.start();
+
+      recordBtn.classList.add("recording");
+
+    };
+
+    // Stop Recording
+
+    stopBtn.onclick = () => {
+
+      recognition.stop();
+
+      recordBtn.classList.remove("recording");
+
+    };
+
