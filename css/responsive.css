@@ -466,8 +466,35 @@
     }
 
     /* Banner css */
-
-
+.hero-btn {
+    display: block;
+}
+.main-box-form {
+    padding: 15px;
+    height: auto;
+    width: 292px;
+    margin-top: 15px;
+}
+.service-select {
+    padding: 9px 13px;
+}
+.service-option {
+    padding: 9px 13px;
+}
+br.break1 {
+    display: none;
+}
+.hero-content {
+    display: block;
+}
+.hero-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.hero-desc {
+    font-size: 16px;
+    max-width: 100%;
+}
     .hero-content {
         padding: 0 15px !important;
     }
