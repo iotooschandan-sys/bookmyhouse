@@ -1201,6 +1201,7 @@ img.google-icon {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    padding: 0 20px;
 }
 
 .video-sec {
