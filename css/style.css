@@ -31,7 +31,7 @@ a:hover {
 .top-bar {
     background: #002434;
     font-size: 14px;
-    padding: 8px 0;
+    padding: 8px 14px;
     color: #ffff;
     border-bottom: 1px solid rgb(199 199 199 / 39%);
 }
@@ -39,6 +39,7 @@ a:hover {
 span.phone a {
     text-decoration: none;
     color: #fff;
+    font-weight: 400;
 }
 
 span.phone a:hover{
@@ -167,7 +168,7 @@ span.phone i {
     background: #25D366;
     color: white;
     padding: 15px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -279,14 +280,7 @@ button.btn2 {
 
 /* Hover */
 
-li.dropdown i {
-    position: absolute;
-    top: 4px;
-    right: -17px;
-}
-li.dropdown {
-    margin-right: 15px;
-}
+
 .hero-image{
     position: relative;
     overflow: hidden;
@@ -319,11 +313,11 @@ li.ex-bg {
 }
 
 /* Show on hover */
-.dropdown:hover .submenu {
+/* .dropdown:hover .submenu {
   opacity: 1;
   display: block;
   transform: translateY(0);
-}
+} */
 
 .submenu {
   position: absolute;
@@ -335,11 +329,13 @@ li.ex-bg {
   background: #fff;
   width: 200px;
 
-  opacity: 0;
+  /* opacity: 0; */
   transition: 0.3s;
 
   z-index: 999; /* important */
 }
+
+
 
 /* Submenu items */
 .submenu li {
@@ -359,13 +355,72 @@ li.ex-bg {
   position: relative;
 }
 
+
+.sb-menu {
+    position: absolute;
+    background: #ffffff;
+    z-index: 99;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    width: 500px;
+}
+
+/* .sb-menu {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+} */
+
+.sb-menu {
+    padding: 35px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 999;
+    margin-top: 11px;
+}
+
+.dropdown:hover .sb-menu {
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+}
+.sb-menu li {
+    padding: 10px 20px 10px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sb-menu li:hover {
+  background: #f5f7f8;
+  color: #000;
+  padding-left: 25px;
+  width: 100%;
+}
+
 .logo img {
     width: 90px;
 }
 
+.list-ul{
+  list-style: none;
+  padding: 0;
+}
 
-
-
+ul.list-ul li i {
+    width: 20px;
+    font-size: 18px;
+    margin-right: 8px;
+}
 .hero {
   position: relative;
   overflow: hidden;
@@ -385,7 +440,45 @@ li.ex-bg {
   justify-content: space-between;
   padding: 0px 0px 0px 15px;
 }
+form.service-form h3 {
+    font-size: 20px;
+}
+.input-group input {
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    width: 100%;
+    border: 2px solid #b1b1b1;
+}
+form.service-form h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
 
+.dropdown.input-group button {
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    width: 100%;
+    border: 2px solid #b1b1b1;
+    background: none;
+    color: #7c7c7c;;
+    text-align: left;
+}
+.input-group .dropdown-toggle::after {
+    margin-left: 9.255em !important;
+}
+
+.service-form .dropdown-menu.show {
+    width: 100%;
+}
+form.service-form .btn-3d {
+    width: 100%;
+    padding: 10px;
+}
 .content1 {
   width: 50%;
 }
@@ -1567,7 +1660,7 @@ img.google-icon {
 
 
 .stats-box {
-    width: 100%;
+    width: 98%;
     margin: auto;
     /* background: linear-gradient(90deg,#14b6d4,#27b9c7); */
     background: #2caac1;
@@ -1598,7 +1691,13 @@ img.google-icon {
     gap:18px;
 
     position:relative;
-    padding:0 20px;
+    padding: 0 15px;
+}
+.bg-success1{
+  background:#2caac1;
+}
+.new-testimonial .progress-bar {
+    background:#2caac1;
 }
 
 /* VERTICAL LINE */
@@ -2061,8 +2160,8 @@ section.faq-section .container-fluid {
 }
 
 .process-icon-wrap{
-  min-width:90px;
-  height:90px;
+  min-width:80px;
+  height:80px;
   border-radius:50%;
   background:#003087;
   border: 6px solid #adeaf594;
@@ -2078,7 +2177,7 @@ section.faq-section .container-fluid {
 }
 
 .process-content h3{
-  font-size:25px;
+  font-size:24px;
   font-weight:600;
   margin-bottom:12px;
   color:#002434;
@@ -2609,8 +2708,8 @@ section.faq-section .container-fluid {
     border-radius: 50px 50px 0 0;
     overflow: hidden;
     padding: 90px 20px 190px;
-    background-image: url('../img/ne-bg.png');
-    background-position: 0% bottom;
+    background-image: url('../img/ne-bg1.png');
+    background-position: 0% 82%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -2880,4 +2979,110 @@ section.faq-section .container-fluid {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 24px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
+.faq-btn {
+    display: flex;
+    gap: 15px;
+}
+
+
+ .footer{
+      background:#002434;
+      color:#fff;
+      padding-top:50px;
+    }
+
+    .footer h5{
+      font-size:18px;
+      font-weight:700;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .footer p{
+      color:#d6d6d6;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .footer ul{
+      padding:0;
+      list-style:none;
+    }
+
+    .footer ul li{
+      margin-bottom:12px;
+    }
+
+    .footer ul li a{
+      color:#d6d6d6;
+      text-decoration:none;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    .footer ul li a:hover{
+      color:#fff;
+      padding-left:5px;
+    }
+
+    .footer-border{
+      border-right:1px solid rgba(255,255,255,0.2);
+    }
+
+    .social-icons{
+      display:flex;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .social-icons a{
+      width:40px;
+      height:40px;
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#2caac1;
+      border-color:#2caac1;
+      transform:translateY(-3px);
+    }
+
+    .contact-info li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .contact-info i{
+      margin-top:4px;
+      color:#fff;
+    }
+
+    .bottom-footer{
+      border-top:1px solid rgba(255,255,255,0.2);
+      margin-top:40px;
+      padding:18px 0;
+      font-size:14px;
+      color:#d6d6d6;
+    }
+
+    .bottom-footer a{
+      color:#d6d6d6;
+      text-decoration:none;
+      margin-left:18px;
+    }
+
+    .bottom-footer a:hover{
+      color:#fff;
+    }

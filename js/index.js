@@ -203,96 +203,96 @@ serviceOptions.forEach(option => {
 //  CARDS
 // =========================
 
-const cards = document.querySelectorAll(".card");
-const flags = document.querySelectorAll(".flag");
+// const cards = document.querySelectorAll(".card");
+// const flags = document.querySelectorAll(".flag");
 
-let active = 0;
+// let active = 0;
 
 // =========================
 // UPDATE CARDS
 // =========================
 
-function updateCards() {
+// function updateCards() {
 
-    cards.forEach(card => {
-        card.classList.remove("active", "prev", "next");
-    });
+//     cards.forEach(card => {
+//         card.classList.remove("active", "prev", "next");
+//     });
 
-    flags.forEach(flag => {
-        flag.classList.remove("active");
-    });
+//     flags.forEach(flag => {
+//         flag.classList.remove("active");
+//     });
 
-    const prev =
-        (active - 1 + cards.length) % cards.length;
+//     const prev =
+//         (active - 1 + cards.length) % cards.length;
 
-    const next =
-        (active + 1) % cards.length;
+//     const next =
+//         (active + 1) % cards.length;
 
-    // active card
-    cards[active].classList.add("active");
+//     // active card
+//     cards[active].classList.add("active");
 
-    // prev card
-    cards[prev].classList.add("prev");
+//     // prev card
+//     cards[prev].classList.add("prev");
 
-    // next card
-    cards[next].classList.add("next");
+//     // next card
+//     cards[next].classList.add("next");
 
-    // active flag
-    if(flags[active]){
-        flags[active].classList.add("active");
-    }
-}
+//     // active flag
+//     if(flags[active]){
+//         flags[active].classList.add("active");
+//     }
+// }
 
-updateCards();
+// updateCards();
 
 
 // =========================
 // FLAG CLICK
 // =========================
 
-flags.forEach((flag, index) => {
+// flags.forEach((flag, index) => {
 
-    flag.addEventListener("click", () => {
+//     flag.addEventListener("click", () => {
 
-        active = index;
+//         active = index;
 
-        updateCards();
+//         updateCards();
 
-    });
+//     });
 
-});
+// });
 
 
 // =========================
 // CARD IMAGE CLICK
 // =========================
 
-cards.forEach((card, index) => {
+// cards.forEach((card, index) => {
 
-    const img = card.querySelector("img");
+//     const img = card.querySelector("img");
 
-    img.addEventListener("click", () => {
+//     img.addEventListener("click", () => {
 
-        active = index;
+//         active = index;
 
-        updateCards();
+//         updateCards();
 
-    });
+//     });
 
-});
+// });
 
 
 // =========================
 // AUTO SLIDE
 // =========================
 
-setInterval(() => {
+// setInterval(() => {
 
-    active = (active + 1) % cards.length;
+//     active = (active + 1) % cards.length;
 
-    updateCards();
+//     updateCards();
 
-}, 3000);
+// }, 3000);
     // =========================
     // TESTIMONIAL SWIPER
     // =========================
