@@ -322,8 +322,18 @@ li.ex-bg {
     border-radius: 30px;
     border: 1px solid;
 }
+.hw-btn a {
+    font-weight: bold;
+}
+li.ex-bg:hover::after {
+ display: none !important;
+}
 li.ex-bg a {
     font-size: 19px;
+}
+
+.form-group-custom .input-group {
+    background: transparent;
 }
 
 /* Show on hover */
@@ -888,9 +898,16 @@ img.google-icon {
   padding: 25px;
   border-radius: 15px;
   background: #fff;
+  height: 310px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
-
+.footer-img {
+    display: flex;
+    gap: 15px;
+}
+.footer-img i {
+    font-size: 40px;
+}
 /* Title */
 .testimonial-title {
     color: #FF5744;
@@ -1675,6 +1692,7 @@ img.google-icon {
 
     position:relative;
     padding: 0 15px;
+    border-right: 1px solid #fff;
 }
 .bg-success1{
   background:#2caac1;
@@ -1686,8 +1704,6 @@ img.google-icon {
 /* VERTICAL LINE */
 
 .stat-content {
-    border-left: 1px solid #fff;
-    padding-left: 15px;
     text-align: left;
 }
 /* ICON */
@@ -2861,6 +2877,7 @@ section.faq-section .container-fluid {
 
 .zx-list-box li{
     cursor:pointer;
+    display: flex;
 }
 
 .zx-list-box li:hover{
@@ -2960,12 +2977,14 @@ section.faq-section .container-fluid {
 
 
 .hw-btn {
-    position: absolute;
+    /* position: absolute; */
     left: 50%;
-    transform: translate(-50%, 24px);
+    /* transform: translate(-77%, 79px); */
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 .faq-btn {
     display: flex;
@@ -2999,7 +3018,7 @@ section.faq-section .container-fluid {
     }
 
     .footer ul li{
-      margin-bottom:12px;
+      margin-bottom:5px;
     }
 
     .footer ul li a{
@@ -3914,7 +3933,7 @@ section.faq-section .container-fluid {
       gap:10px;
       padding:12px 28px;
       border:1px solid #d8d8d8;
-      border-radius:40px;
+      border-radius:8px;
       background:#fff;
       font-size:14px;
       font-weight:600;
@@ -3931,7 +3950,7 @@ section.faq-section .container-fluid {
       width:22px;
       height:22px;
       border-radius:50%;
-      background:#1D2B5B;
+      background:#09235C;
       color:#fff;
       display:flex;
       align-items:center;
