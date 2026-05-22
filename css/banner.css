@@ -667,7 +667,9 @@ body {
   background: #999;
   border-radius: 10px;
 }
-
+div#page2 {
+    padding-top: 120px;
+}
 .main-box-form {
   background: #fff;
   padding: 38px;

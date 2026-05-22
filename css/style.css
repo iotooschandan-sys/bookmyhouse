@@ -14,6 +14,10 @@ h2{
     font-size: 45px !important;
     color: #09235C !important;
 }
+
+.para{
+  font-size: 18px;
+}
 section{
     padding: 80px 0;
     overflow: hidden;
@@ -1282,9 +1286,7 @@ img.google-icon {
     font-size: 17px;
 }
 
-.cta-right .btn-3d{
-  background-color: #2caac1 !important;
-}
+
 .cta-right .btn-3d:hover{
   color: #09235C !important;
 }
@@ -1393,7 +1395,7 @@ img.google-icon {
 .video-sec .left p {
   margin: 20px 0;
   color: #6c7a92;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -2067,11 +2069,15 @@ img.google-icon {
 
 .zx-team-photo {
     border-radius: 12px;
-    height: 206px;
-    width: 150px;
     object-fit: cover;
 }
-
+.line1 {
+    height: 9px;
+    width: 100%;
+    background: #2caac1;
+    margin: 10px 0 30px;
+    border-radius: 30px;
+}
     .zx-team-name{
       font-size:16px;
       font-weight:700;
@@ -2357,7 +2363,7 @@ section.faq-section .container-fluid {
 }
 
 .service-feature-item span{
-  font-size:17px;
+  font-size:18px;
   color:#222;
   font-weight:500;
 }
@@ -2545,7 +2551,6 @@ section.faq-section .container-fluid {
 .blog-flex{
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .w-30{
@@ -2632,15 +2637,17 @@ section.faq-section .container-fluid {
     border-bottom:1px solid #e5e5e5;
 }
 
-.custom-accordion .accordion-button{
-    background:#fff;
-    font-size:24px;
-    font-weight:700;
-    color:#07133d;
-    padding:30px 40px;
-    box-shadow:none;
+.custom-accordion .accordion-button {
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 19px 30px;
+    box-shadow: none;
 }
 
+.location-section {
+    padding: 40px 0;
+}
 .custom-accordion .accordion-button:not(.collapsed){
     background:#fff;
     color:#07133d;
@@ -2999,7 +3006,7 @@ section.faq-section .container-fluid {
  .footer{
       background:#09235C;
       color:#fff;
-      padding-top:50px;
+      padding: 50px 50px 0;
       border-top: 1px solid #ffffff59;
     }
 
@@ -3409,7 +3416,7 @@ section.faq-section .container-fluid {
       color: #fff;
       font-size: 15px;
       margin-bottom: 4px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .dash-card-content p {
@@ -3882,7 +3889,7 @@ section.faq-section .container-fluid {
     background: #12254e;
 }
 .btn-card i {
-    font-size: 24px;
+    font-size: 16px;
 }
     .sub-heading{
       color:#2caac1;
@@ -3907,7 +3914,7 @@ section.faq-section .container-fluid {
     /* flex-wrap: wrap; */
     gap: 22px;
     margin-bottom: 30px;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
         margin-bottom: 25px;
 }
@@ -3918,7 +3925,7 @@ section.faq-section .container-fluid {
     justify-content: center;
     transition: 0.3s ease;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 10px 10px;
 }
     .location-card:hover{
       transform:translateY(-5px);
@@ -3927,12 +3934,14 @@ section.faq-section .container-fluid {
 
 .location-card img {
     width: 97px;
+    height: 85px;
 }
 
     .location-card p{
       font-size:14px;
       font-weight:600;
       color:#fff;
+      margin: 0;
     }
     
 
@@ -3968,20 +3977,6 @@ section.faq-section .container-fluid {
     }
 
 
-
-
-
-
-
-    .banner{
-   background: linear-gradient(180deg, #09235C, #09235C);
-    border: 1px solid rgba(0, 255, 170, 0.2);
-    border-radius:22px;
-    padding:18px;
-    color:#fff;
-    overflow:hidden;
-    box-shadow:0 0 25px rgba(0,0,0,0.4);
-}
 
 .info-box{
     border-right:1px solid rgba(255,255,255,0.15);
@@ -4020,15 +4015,14 @@ section.faq-section .container-fluid {
 .green{
     color:#21e76b;
 }
-
 .btn-card {
     border-radius: 18px;
-    padding: 14px 20px;
+    padding: 14px 12px;
     color: #fff;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 4px;
     transition: 0.3s;
 }
 i.fa-solid.fa-check.f-check {
@@ -4060,13 +4054,13 @@ i.fa-solid.fa-check.f-check {
 .banner .btn-card h5 {
     font-size: 14px;
     font-weight: bold;
+    margin: 0;
 }
 .btn-card small {
     font-size: 12px;
 }
-
 .srv-allbtn {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    gap: 9px;
+    grid-template-columns: 32% 29% 34%;
 }
