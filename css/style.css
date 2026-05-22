@@ -2576,7 +2576,7 @@ section.faq-section .container-fluid {
 }
 .acc-sticky {
     position: sticky;
-    top: 20px;
+    top: 185px;
 }
 
 .faq-left h2{
@@ -3886,10 +3886,12 @@ section.faq-section .container-fluid {
 .helpdesk-agent img {
     position: absolute;
     right: -49px;
-    top: -34px;
+    top: -23px;
     width: 46%;
 }
-
+.on-mb{
+  display: none;
+}
 
 
 .location-section {

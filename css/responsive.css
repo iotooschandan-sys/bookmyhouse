@@ -410,20 +410,83 @@
 /* ==== Mobile Screen  */
 @media(max-width:575px) {
     section {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .mobile.menu {
         display: block;
         border-bottom: 0.5px solid rgb(0 0 0 / 17%);
+        background: #fff;
     }
 
     h2 {
-        font-size: 30px !important;
+        font-size: 25px !important;
     }
 
+.top-badge {
+    padding: 6px 10px 6px 9px;
+    font-size: 10px;
+    font-weight: 500;
+}
+.locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer {
+    padding: 50px 10px 0;
+}
+section.faq-section .container-fluid {
+    padding: 0 10px;
+}
+.hero-section {
+    padding-top: 40px;
+}
+.hero-btn a {
+    width: auto;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 10px;
+    height: 40px;
+}
+.helpdesk-title {
+    font-size: 23px;
+}
+.helpdesk-text {
+    font-size: 16px;
+}
+.helpdesk-box {
+    padding: 0 15px 30px;
+}
+.helpdesk-content {
+    padding: 30px 10px 0 0;
+}
+.helpdesk-btn-wrap {
+    justify-content: center;
+}
+.helpdesk-agent {
+    display: none;
+}
+.faq-head {
+    padding-bottom: 15px;
+}
+.feature-wrapper {
+    display: none;
+}
 
+.ondesktop{
+    display: none;
+}
+.on-mb{
+  display: block;
+}
 
+a.whatsapp-btn.on-mb {
+    display: flex;
+}
+.whatsapp-btn i {
+    font-size: 18px;
+}
     .mobile-topbar i {
         margin-right: 5px;
     }
@@ -467,13 +530,28 @@
 
     /* Banner css */
 .hero-btn {
-    display: block;
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
 .main-box-form {
-    padding: 15px;
+    padding: 25px 15px;
     height: auto;
-    width: 292px;
-    margin-top: 15px;
+    width: 110%;
+    margin-top: 76%;
+    right: -26px;
+}
+.heading1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.service-icon img {
+    width: 30px;
+}
+.option-title {
+    font-size: 15px;
+}
+.service-title {
+    font-size: 15px;
 }
 .service-select {
     padding: 9px 13px;
@@ -634,11 +712,14 @@ br.break1 {
         top: -47px;
     }
 
-    .services .stat-item {
-        display: block;
-        margin-top: 25px;
-        text-align: left;
-    }
+.services .stat-item {
+    display: grid;
+    margin-top: 10px;
+    text-align: left;
+    grid-template-columns: 25% 60%;
+    align-items: center;
+    border-right: none;
+}
 
     .stat-content {
         text-align: left;
@@ -654,9 +735,16 @@ br.break1 {
         margin-bottom: 50px;
     }
 
-    .stat-box h2 {
-        font-size: 60px !important;
-    }
+   .stat-box h2 {
+    font-size: 35px !important;
+}
+.stat-box h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.stat-box p {
+    font-size: 14px;
+}
 
     .stats-wrapper {
         padding: 50px 15px 130px;
@@ -690,9 +778,14 @@ br.break1 {
         padding: 0px 0 50px;
     }
 
-    .zx-blog-item {
-        display: block;
-    }
+.zx-blog-item {
+    display: block;
+    border: 1px solid #00000030;
+    padding: 10px;
+}
+.zx-center-title {
+    font-size: 25px !important;
+}
 
     .zx-blog-thumb {
         width: 100%;
@@ -720,13 +813,21 @@ br.break1 {
     .zx-team-photo {
         height: 230px;
         width: 100%;
-        margin-top: 20px;
     }
 
     .new-testimonial .left {
         height: 220px;
     }
-
+    .zx-team-card {
+    padding: 10px;
+}
+.cta-box .btn-3d {
+    background: #fff;
+    color: #09235C;
+}
+.video-cta {
+    padding: 0;
+}
     .rating-box span {
         font-size: 40px;
     }
@@ -782,7 +883,7 @@ br.break1 {
 
     .btn-3d {
         padding: 10px 24px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .flex-wrp {
@@ -793,6 +894,9 @@ br.break1 {
         width: 100%;
     }
 
+    .services {
+    padding-top: 40px;
+}
     .new-testimonial .right {
         width: 100%;
         margin-top: 30px;
@@ -809,11 +913,11 @@ br.break1 {
     }
 
     .stat-content h4 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .stat-content h3 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .slide {
@@ -888,11 +992,42 @@ br.break1 {
         padding-bottom: 0;
     }
 
-    .process-icon-wrap {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 15px;
-    }
+  .process-icon-wrap {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    margin-bottom: 10px;
+}
+.hw-btn {
+    display: block;
+    text-align: center;
+}
+.work-process-area {
+    padding-bottom: 40px;
+}
+.hw-btn a {
+    margin-bottom: 10px;
+}
+.auto-btn {
+    width: 167px;
+    height: 44px;
+}
+.process-icon-wrap i {
+    font-size: 24px;
+
+}
+.btn-inner i {
+    color: #fff;
+    font-size: 15px;
+}
+.btn-text {
+    color: #fff;
+    font-size: 13px;
+}
+.mobile-topbar .btn-3d {
+    padding: 10px 16px;
+    font-size: 12px !important;
+}
 
     .process-card {
         display: block;
@@ -990,11 +1125,42 @@ br.break1 {
         position: unset;
     }
 
-    .custom-accordion .accordion-button {
-        font-size: 17px;
-        padding: 30px 15px;
-    }
-
+ .custom-accordion .accordion-button {
+    font-size: 16px;
+    padding: 15px 55px 15px 17px;
+}
+.custom-accordion .accordion-body {
+    padding: 10px;
+    font-size: 16px;
+}
+.assist-wrap {
+    border-radius: 18px 18px 0 0;
+    padding: 30px 15px;
+}
+.assist-heading {
+    font-size: 25px;
+}
+.assist-btn-area {
+    justify-content: center;
+    margin-top: 10px;
+}
+.assist-btn-white {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+.assist-btn-area {
+    margin-top: 20px;
+}
+.whatsapp-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+.about {
+    padding-top: 75%;
+}
+.feature-box h6 {
+    font-size: 18px;
+}
     .main-footer {
         padding: 50px 0px 25px;
     }
@@ -1112,4 +1278,11 @@ br.break1 {
 
 
 
+}
+
+
+@media (min-width:370px) and (max-width:425px){
+.main-box-form {
+    margin-top: 63%;
+}
 }
