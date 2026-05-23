@@ -1,10 +1,11 @@
-@media(max-width:768px) {
+@media(max-width:769px) {
     .section {
         padding: 60px 0;
     }
 .mobile-flex .btn-3d {
     background: #002434;
 }
+
     .navbar {
         padding: 20px 0;
         background: #fff;
@@ -73,7 +74,7 @@
 
 /* ====== Tablet */
 
-@media (min-width:575px) and (max-width:768px) {
+@media (min-width:575px) and (max-width:769px) {
 
     .sticky-bar {
         display: none;
@@ -98,19 +99,105 @@
     .hero-section::before {
         display: none;
     }
+.srv-allbtn .btn-3d, .srv-allbtn .whatsapp-btn, .srv-allbtn .btn-card{
+    height: 50px;
+}
+.tablet-btn {
+    display: flex;
+}
+span.phone a {
+    font-size: 13px;
+}
+    a.whatsapp-btn {
+    margin-left: 0;
+    font-size: 14px;
+    padding: 8px 20px;
+    color: #fff;
+    display: flex;
+    gap: 1px;
+}
+.auto-btn {
+    height: 48px;
+}
+.offcanvas-start {
+    width: 590px !important;
+}
+.record-head {
+    font-size: 13px;
+}
+
 
     .mobile-topbar {
         display: none;
     }
+.phone {
+    font-size: 12px;
+}
+.top-icon-flex {
+    display: flex;
+    gap: 0px;
+}
+.tb-cs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.tb-cs span{
+    display: none;
+}
+span.ms-3.tablet-css {
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+.hero-title {
+    font-size: 45px;
+    margin: 10px 0;
+}
+a.whatsapp-btn.on-mb {
+    display: none;
+}
+.hero-btn .whatsapp-btn {
+    gap: 13px;
+}
+.hero-btn a {
+    width: auto;
+}
+.feature-wrapper {
+    display: none;
+}
+.main-box-form {
+    width: 80%;
+    left: 50%;
+    z-index: 999;
+    top: 25px;
+    height: auto;
+    transform: translate(-50%, 0px);
+}
+.service-icon img {
+    width: 35px;
+}
+.service-option {
+    padding: 10px 25px;
+}
+.about {
+    padding-top: 45%;
+}
     .mobile-bar {
         display: flex;
         align-items: center;
         gap: 24px;
     }
 
+    .stat-content h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
     section {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 .hero-content {
     padding: 0 15px !important;
@@ -131,9 +218,7 @@
         padding: 0px 0px 0px 20px;
     }
 
-    .tablet-css {
-        display: none;
-    }
+
 
     .banner-swiper .feature-box {
         gap: 18px;
@@ -176,7 +261,32 @@
         height: 340px;
         width: 100%;
     }
-
+.faq-head {
+    padding-bottom: 20px;
+}
+.assist-heading {
+    font-size: 25px;
+    padding-left: 10px;
+}
+.assist-subtext {
+    padding-left: 10px;
+}
+.assist-icon-circle {
+    width: 50px;
+    height: 50px;
+}
+.assist-icon-circle i {
+    font-size: 20px;
+}
+.footer {
+    padding: 40px 10px 0;
+}
+.footer p {
+    font-size: 13px;
+}
+.assist-wrap {
+    padding: 50px 15px;
+}
     .about .year {
         font-size: 18px;
     }
@@ -184,7 +294,24 @@
     .about .text {
         font-size: 10px;
     }
-
+.helpdesk-box {
+    position: relative;
+}
+.helpdesk-agent img {
+    right: -28px;
+    top: 3px;
+    width: 40%;
+}
+.locations {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-bottom: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 15px;
+    max-width: 100%;
+}
 
     .cta-box {
         padding: 45px 25px;
@@ -220,18 +347,28 @@
         font-size: 30px;
     }
 
-    .stat-content h4 {
-        font-size: 20px;
-    }
+.stat-content h4 {
+    font-size: 14px;
+}
+.stat-item {
+    gap: 12px;
+    padding: 0 5px 0 0;
+}
 
     .stats-box {
         padding: 60px 10px;
+        width: 97%;
     }
 
     .stat-box h2 {
         font-size: 55px !important;
     }
-
+.services {
+    padding-top: 80px;
+}
+.stats-wrapper {
+    padding: 30px 20px 118px;
+}
     .stat-box h3 {
         font-size: 24px;
         margin-bottom: 10px;
@@ -243,13 +380,32 @@
     }
 
     .new-testimonial h2 {
-        font-size: 42px !important;
+        font-size: 35px !important;
     }
+    .right .tag1 {
+    margin-bottom: 0;
+}
+.new-testimonial .left {
+    height: 290px;
+}
 
-    .rating-box {
-        bottom: 127px;
-    }
+.rating-box {
+    bottom: 25px;
+}
+.new-testimonial {
+    padding-top: 20px;
+}
 
+.flex-wrp {
+    margin-bottom:0;
+}
+.zx-blog-item {
+    padding: 18px 0;
+    margin: 0;
+}
+.zx-head-flex {
+    margin-bottom: 10px;
+}
     .rating-box span {
         font-size: 47px;
     }
@@ -298,10 +454,25 @@
         gap: 38px;
     }
 
-    .cta-box {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-    }
+.cta-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.para {
+    font-size: 16px;
+}
+.video-cta {
+    display: block;
+}
+
+.video-cta .left {
+    width: 100%;
+}
+.video-cta .right {
+    width: 100%;
+}
+
 
     .cta-left {
         width: 100%;
@@ -319,15 +490,31 @@
         display: block;
     }
 
-    .process-icon-wrap {
-        width: 70px;
-        height: 90px;
-        margin-bottom: 20px;
-    }
-
-    .process-content h3 {
-        font-size: 20px;
-    }
+.process-icon-wrap {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    min-width: 50px;
+}
+.process-icon-wrap i {
+    font-size: 18px;
+}
+.work-process-title {
+    margin-bottom: 40px;
+}
+.work-process-area {
+    padding-bottom: 40px;
+}
+.service-top-features {
+    gap: 21px;
+    width: 100%;
+}
+.office-cleaning-section {
+    padding: 40px 0 0 0;
+}
+.process-content h3 {
+    font-size: 18px;
+}
 
     .process-content p {
         font-size: 16px;
@@ -422,6 +609,10 @@
     h2 {
         font-size: 25px !important;
     }
+span.btn-text {
+    font-size: 11px;
+    color: #fff;
+}
 
 .top-badge {
     padding: 6px 10px 6px 9px;
@@ -481,8 +672,30 @@ section.faq-section .container-fluid {
   display: block;
 }
 
-a.whatsapp-btn.on-mb {
+.whatsapp-btn.on-mb {
     display: flex;
+    justify-content: center;
+}
+.bottom-footer {
+    margin-top: 15px;
+}
+.offcanvas-header {
+    border-bottom: 1px solid #09235C;
+}
+.srv-allbtn {
+    grid-template-columns: 49% 51%;
+}
+.record-head {
+    font-size: 13px;
+}
+.menu li a, .menu li {
+    font-weight: 500;
+}
+.srv-allbtn .whatsapp-btn, .srv-allbtn .btn-card {
+    height: 56px;
+}
+.srv-allbtn .btn-3d {
+    display: none;
 }
 .whatsapp-btn i {
     font-size: 18px;
@@ -531,7 +744,7 @@ a.whatsapp-btn.on-mb {
     /* Banner css */
 .hero-btn {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
 }
 .main-box-form {
     padding: 25px 15px;
@@ -1020,10 +1233,7 @@ br.break1 {
     color: #fff;
     font-size: 15px;
 }
-.btn-text {
-    color: #fff;
-    font-size: 13px;
-}
+
 .mobile-topbar .btn-3d {
     padding: 10px 16px;
     font-size: 12px !important;
