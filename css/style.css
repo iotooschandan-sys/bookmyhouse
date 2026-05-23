@@ -405,7 +405,7 @@ header{
 }
 
 .sb-menu {
-    padding: 35px 20px;
+    padding:20px;
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
@@ -2240,6 +2240,10 @@ div#page2 {
       transition:0.3s;
     }
 
+
+    .feature-box p {
+    margin: 0;
+}
     .feature-box:hover{
       transform:translateY(-3px);
     }
@@ -2339,16 +2343,19 @@ div#page2 {
       font-size:14px;
     }
 
-    .feature-icon{
-      width:38px;
-      height:38px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:16px;
-    }
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    border: 1.5px solid #d9d9e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d2d66;
+    font-size: 22px;
+    background: #fff;
+}
 
     .icon-blue{
       background:#09235C;
@@ -2380,6 +2387,7 @@ div#page2 {
 .about .feature-box {
     display: flex;
     gap: 10px;
+    margin-bottom: 20px;
 }
     
     .about .main-box{
@@ -2498,7 +2506,9 @@ div#page2 {
   background-color: #09235C;
   transition: 1s;
 }
-
+.stat-item:last-child{
+  border-right: none !important;
+}
 /* SINGLE ITEM */
 .stat-item{
     flex:1;
@@ -4167,8 +4177,8 @@ section.faq-section .container-fluid {
       border-right: 1px solid rgba(255,255,255,0.08);
     }
 
-    .dash-section {
-    padding: 20px 10px;
+.dash-section {
+    padding: 0px 10px 20px;
 }
 .srv-all{
   margin-bottom: 35px;

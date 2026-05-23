@@ -629,9 +629,15 @@ span.btn-text {
 section.faq-section .container-fluid {
     padding: 0 10px;
 }
+
+.helpdesk-btn-wrap a {
+    padding: 10px 10px;
+    font-size: 11px;
+}
 .hero-section {
     padding-top: 40px;
 }
+
 .hero-btn a {
     width: auto;
     border-radius: 8px;
@@ -671,7 +677,12 @@ section.faq-section .container-fluid {
 .on-mb{
   display: block;
 }
-
+.offcanvas-body {
+    background: #09235C;
+}
+.offcanvas-body .nav-link {
+    color: #fff !important;
+}
 .whatsapp-btn.on-mb {
     display: flex;
     justify-content: center;
@@ -705,7 +716,7 @@ section.faq-section .container-fluid {
     }
 
     .mobile-topbar {
-        background: #002434;
+        background: #09235C;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1210,7 +1221,9 @@ br.break1 {
     height: 60px;
     min-width: 60px;
     margin-bottom: 10px;
+    margin: 0 auto 15px;
 }
+
 .hw-btn {
     display: block;
     text-align: center;
@@ -1239,10 +1252,11 @@ br.break1 {
     font-size: 12px !important;
 }
 
-    .process-card {
-        display: block;
-    }
-
+.process-card {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
     .process-arrow-top {
         display: none;
     }
@@ -1348,11 +1362,17 @@ br.break1 {
     padding: 30px 15px;
 }
 .assist-heading {
-    font-size: 25px;
+    font-size: 19px;
+    margin-bottom: 10px;
 }
+
 .assist-btn-area {
     justify-content: center;
     margin-top: 10px;
+}
+.assist-btn-area a, .assist-btn-area button {
+    padding: 8px 15px;
+    font-size: 13px;
 }
 .assist-btn-white {
     padding: 10px 24px;
@@ -1360,6 +1380,10 @@ br.break1 {
 }
 .assist-btn-area {
     margin-top: 20px;
+    gap: 5px;
+}
+.location-section {
+    margin-top: -6px;
 }
 .whatsapp-btn {
     padding: 10px 24px;
