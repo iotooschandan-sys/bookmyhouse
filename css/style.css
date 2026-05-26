@@ -3826,7 +3826,7 @@ section.faq-section .container-fluid {
 
 
  .footer{
-      background:#09235C;
+      background: linear-gradient(135deg, #09348f, #040d22);
       color:#fff;
       padding: 50px 50px 0;
       border-top: 1px solid #ffffff59;
