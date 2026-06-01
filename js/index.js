@@ -598,3 +598,12 @@ const popup = document.getElementById("popup");
 
     };
 
+
+const items = document.querySelectorAll('.service-menu-item');
+const title = document.getElementById('serviceTitle');
+
+items.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        title.textContent = item.dataset.text;
+    });
+});

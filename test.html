@@ -1,178 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banner Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    background:#061a4b;
-    padding:40px;
+background:#f3f3f3;
+padding:40px;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
 }
 
-.banner{
-    background:linear-gradient(90deg,#021b56,#0a1e74,#3f0d84);
-    border-radius:22px;
-    padding:18px;
-    color:#fff;
-    overflow:hidden;
-    box-shadow:0 0 25px rgba(0,0,0,0.4);
+.quote-box{
+
+width:100%;
+max-width:980px;
+position:relative;
+overflow:hidden;
+
+background:linear-gradient(
+135deg,
+#f2df12 0%,
+#dde28c 45%,
+#d8e5c8 100%
+);
+
+padding:75px 45px 50px;
+
+/* TOP CURVE EFFECT */
+clip-path: polygon(0% 0%, 12% 0%, 100% 3%, 100% 100%, 0% 100%);
+
+border-radius:35px;
+
 }
 
-.info-box{
-    border-right:1px solid rgba(255,255,255,0.15);
+.small-title{
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:18px;
+color:#000;
 }
 
-.icon-circle{
-    width:80px;
-    height:80px;
-    border-radius:20px;
-    background:linear-gradient(180deg,#12a5ff,#0047ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    box-shadow:0 0 18px rgba(0,132,255,0.4);
+.quote-box h2{
+font-size:60px;
+font-weight:500;
+margin-bottom:45px;
+color:#000;
 }
 
-.icon-circle i{
-    font-size:38px;
+.form-row{
+display:flex;
+gap:22px;
+margin-bottom:22px;
 }
 
-.check{
-    position:absolute;
-    right:-5px;
-    bottom:-5px;
-    width:28px;
-    height:28px;
-    background:#12d86b;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border:3px solid #fff;
+.form-group{
+flex:1;
 }
 
-.green{
-    color:#21e76b;
+label{
+display:block;
+font-size:14px;
+margin-bottom:10px;
+color:#333;
 }
 
-.btn-card{
-    border-radius:18px;
-    padding:18px 22px;
-    color:#fff;
-    height:100%;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    transition:0.3s;
+input,
+select{
+
+width:100%;
+height:58px;
+padding:0 18px;
+border:none;
+outline:none;
+background:#f7f7f7;
+border-radius:10px;
+font-size:15px;
+color:#555;
+
 }
 
-.btn-card:hover{
-    transform:translateY(-4px);
+.agree-text{
+margin:24px 0;
+font-size:14px;
+line-height:1.9;
+color:#444;
 }
 
-.whatsapp{
-    background:linear-gradient(90deg,#118c4f,#005e3a);
+button{
+
+background:#000;
+color:#fff;
+border:none;
+padding:18px 36px;
+border-radius:50px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+
 }
 
-.call{
-    background:linear-gradient(90deg,#005eff,#143bbf);
+button:hover{
+transform:translateY(-4px);
 }
 
-.record{
-    background:linear-gradient(90deg,#8f1dff,#ff33cc);
+@media(max-width:768px){
+
+.quote-box{
+padding:55px 25px;
 }
 
-.btn-icon{
-    font-size:34px;
+.quote-box h2{
+font-size:42px;
 }
 
-.small-text{
-    color:#d5d5d5;
-    font-size:14px;
+.form-row{
+flex-direction:column;
+gap:18px;
+}
+
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<div class="quote-box">
 
-<div class="banner row align-items-center g-3">
+<div class="small-title">
+GET YOUR FREE ESTIMATE
+</div>
 
-    <!-- Left Section -->
-    <div class="col-lg-4 info-box">
-        <div class="d-flex align-items-center gap-3">
+<h2>Get a Quote</h2>
 
-            <div class="icon-circle">
-                <i class="bi bi-person-fill"></i>
+<form>
 
-                <div class="check">
-                    <i class="bi bi-check-lg text-white"></i>
-                </div>
-            </div>
+<div class="form-row">
 
-            <div>
-                <h3 class="fw-bold mb-1">
-                    Need a <span class="green">Trusted Maid</span><br>
-                    or <span class="green">caretaker?</span>
-                </h3>
+<div class="form-group">
+<label>Your name</label>
+<input type="text" placeholder="John Smith">
+</div>
 
-                <p class="small-text mb-0">
-                    We're just a call or chat away!
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- WhatsApp -->
-    <div class="col-lg-3">
-        <div class="btn-card whatsapp">
-            <i class="bi bi-whatsapp btn-icon"></i>
-
-            <div>
-                <h5 class="mb-1">WhatsApp Now</h5>
-                <small>Chat with us</small>
-            </div>
-        </div>
-    </div>
-
-    <!-- Call -->
-    <div class="col-lg-2">
-        <div class="btn-card call">
-            <i class="bi bi-telephone-fill btn-icon"></i>
-
-            <div>
-                <h5 class="mb-1">Call Us Now</h5>
-                <small>Speak to our team</small>
-            </div>
-        </div>
-    </div>
-
-    <!-- Record -->
-    <div class="col-lg-3">
-        <div class="btn-card record">
-            <i class="bi bi-mic-fill btn-icon"></i>
-
-            <div>
-                <h5 class="mb-1">Record Your Details</h5>
-                <small>We'll call you back</small>
-            </div>
-        </div>
-    </div>
+<div class="form-group">
+<label>Email</label>
+<input type="email" placeholder="e.g. john@youremail.com">
+</div>
 
 </div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Phone</label>
+<input type="text" placeholder="e.g. (1) 23 4567 891">
+</div>
+
+<div class="form-group">
+<label>Total square footage</label>
+<input type="text" placeholder="e.g. 120">
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Choose a service</label>
+
+<select>
+<option>Select</option>
+<option>House Cleaning</option>
+<option>Office Cleaning</option>
+<option>Deep Cleaning</option>
+<option>Move In / Out Cleaning</option>
+</select>
+
+</div>
+
+<div class="agree-text">
+☑ By submitting this form, you agree to the processing of your personal data in accordance with the General Data Protection Regulation and our Privacy Policy.
+</div>
+
+<button>
+I'd Like a Quote
+</button>
+
+</form>
 
 </div>
 

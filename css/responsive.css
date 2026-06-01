@@ -589,6 +589,64 @@ a.whatsapp-btn.on-mb {
         right: 4px;
     }
 
+.home-clean-left {
+    width: 52%;
+}
+.home-clean-right {
+    width: 48%;
+}
+.service-menu-title {
+    font-size: 24px;
+}
+.service-menu-box {
+    padding: 34px 20px;
+}
+.service-menu-item {
+    padding: 6px 20px;
+    font-size: 17px;
+}
+.cleaning_content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cleaning_card {
+    padding: 34px 20px;
+}
+.faq_box {
+    margin: 25px 0;
+    padding: 34px 20px;
+}
+.faq_content h3 {
+    font-size: 22px;
+    margin: 25px auto 20px;
+}
+.clean-task-grid {
+    display: block;
+}
+.clean-task-container {
+    padding: 70px 20px 40px;
+}
+.clean-task-card {
+    margin-bottom: 20px;
+}
+.guarantee_right {
+    display: none;
+}
+.guarantee_left {
+    width: 100%;
+}
+.service-testimonial {
+    margin-top: 50px;
+}
+section.form-wrap-section {
+    padding-bottom: 40px;
+}
+.service-form .main-box-form {
+    height: 520px;
+}
+.related-service .service-card {
+    height: 100%;
+}
 }
 
 
@@ -1510,7 +1568,79 @@ br.break1 {
         font-size: 15px;
     }
 
-
+    .home-clean-wrap {
+    display: block;
+}
+.home-clean-left {
+    width: 100%;
+}
+.home-clean-title {
+    margin-bottom: 10px;
+}
+.clean-task-sec {
+    margin-top: 40px;
+}
+.clean-task-container {
+    padding: 70px 10px 40px;
+}
+.clean-task-grid {
+    display: block;
+}
+.clean-task-card {
+    margin: 10px 0;
+}
+.eco_clean_content h2 {
+    margin-bottom: 20px;
+}
+.home-clean-right {
+    width: 100%;
+}
+.home-clean-leaf {
+    width: 71px;
+    top: -23px;
+    left: 70%;
+}
+.service-menu-box {
+    padding: 34px 20px;
+}
+.service-menu-item {
+    padding: 10px 20px;
+}
+.faq_box {
+    margin: 35px 0 0;
+}
+.service-form .main-box-form {
+    height: 448px;
+    margin: 0 0 40px;
+    position: relative;
+    left: 0;
+}
+.service-form .heading1 {
+    font-size: 18px;
+}
+.guarantee_box {
+    display: block;
+    padding: 35px 20px;
+}
+.guarantee_left {
+    width: 100%;
+}
+.guarantee_right {
+    display: none;
+}
+.service-testimonial .mt-5.d-flex.justify-content-center {
+    margin-top: 20px !important;
+}
+.related-service .row.mt-4.g-4 {
+    margin-top: 0 !important;
+}
+.faq_content h3 {
+    font-size: 25px;
+    margin: 8px auto 25px;
+}
+.testimonial-card {
+    height: auto;
+}
 
 }
 
