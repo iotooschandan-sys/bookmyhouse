@@ -671,7 +671,18 @@ span.btn-text {
     font-size: 11px;
     color: #fff;
 }
-
+.cleaning_card {
+    padding: 34px 20px;
+}
+.form-row {
+    display: block;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.cleaning_content h3 {
+    font-size: 24px;
+}
 .top-badge {
     padding: 6px 10px 6px 9px;
     font-size: 10px;
@@ -1164,7 +1175,7 @@ br.break1 {
     }
 
     .btn-3d {
-        padding: 10px 24px;
+        padding: 15px 24px;
         font-size: 14px;
     }
 
