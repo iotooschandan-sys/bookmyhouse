@@ -656,7 +656,7 @@ section.form-wrap-section {
 @media(max-width:575px) {
     section {
         padding: 40px 0;
-        overflow: hidden !important;
+        overflow: hidden;
     }
 .faq-section {
     overflow: hidden !important;
@@ -838,7 +838,7 @@ section.faq-section .container-fluid {
     height: auto;
     width: 110%;
     margin-top: 76%;
-    right: -26px;
+    right: -28px;
 }
 .heading1 {
     font-size: 14px;
@@ -1466,7 +1466,7 @@ br.break1 {
     font-size: 14px;
 }
 .about {
-    padding-top: 75%;
+    padding-top: 65%;
 }
 .feature-box h6 {
     font-size: 18px;
