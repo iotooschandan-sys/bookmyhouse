@@ -1,209 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        body {
+            background: #f3f3f3;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-body{
-background:#f3f3f3;
-padding:40px;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-}
+        .quote-box {
 
-.quote-box{
+            width: 100%;
+            max-width: 980px;
+            position: relative;
+            overflow: hidden;
 
-width:100%;
-max-width:980px;
-position:relative;
-overflow:hidden;
+            background: linear-gradient(135deg,
+                    #f2df12 0%,
+                    #dde28c 45%,
+                    #d8e5c8 100%);
 
-background:linear-gradient(
-135deg,
-#f2df12 0%,
-#dde28c 45%,
-#d8e5c8 100%
-);
+            padding: 75px 45px 50px;
 
-padding:75px 45px 50px;
+            /* TOP CURVE EFFECT */
+            /* clip-path: polygon(0% 0%, 12% 0%, 100% 3%, 100% 100%, 0% 100%); */
 
-/* TOP CURVE EFFECT */
-clip-path: polygon(0% 0%, 12% 0%, 100% 3%, 100% 100%, 0% 100%);
+            border-radius: 35px;
 
-border-radius:35px;
+        }
 
-}
+        .small-title {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            color: #000;
+        }
 
-.small-title{
-font-size:12px;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:18px;
-color:#000;
-}
+        .quote-box h2 {
+            font-size: 60px;
+            font-weight: 500;
+            margin-bottom: 45px;
+            color: #000;
+        }
 
-.quote-box h2{
-font-size:60px;
-font-weight:500;
-margin-bottom:45px;
-color:#000;
-}
+        .form-row {
+            display: flex;
+            gap: 22px;
+            margin-bottom: 22px;
+        }
 
-.form-row{
-display:flex;
-gap:22px;
-margin-bottom:22px;
-}
+        .form-group {
+            flex: 1;
+        }
 
-.form-group{
-flex:1;
-}
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-label{
-display:block;
-font-size:14px;
-margin-bottom:10px;
-color:#333;
-}
+        input,
+        select {
 
-input,
-select{
+            width: 100%;
+            height: 58px;
+            padding: 0 18px;
+            border: none;
+            outline: none;
+            background: #f7f7f7;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #555;
 
-width:100%;
-height:58px;
-padding:0 18px;
-border:none;
-outline:none;
-background:#f7f7f7;
-border-radius:10px;
-font-size:15px;
-color:#555;
+        }
 
-}
+        .agree-text {
+            margin: 24px 0;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #444;
+        }
 
-.agree-text{
-margin:24px 0;
-font-size:14px;
-line-height:1.9;
-color:#444;
-}
+        button {
 
-button{
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
 
-background:#000;
-color:#fff;
-border:none;
-padding:18px 36px;
-border-radius:50px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
+        }
 
-}
+        button:hover {
+            transform: translateY(-4px);
+        }
 
-button:hover{
-transform:translateY(-4px);
-}
+        @media(max-width:768px) {
 
-@media(max-width:768px){
+            .quote-box {
+                padding: 55px 25px;
+            }
 
-.quote-box{
-padding:55px 25px;
-}
+            .quote-box h2 {
+                font-size: 42px;
+            }
 
-.quote-box h2{
-font-size:42px;
-}
+            .form-row {
+                flex-direction: column;
+                gap: 18px;
+            }
 
-.form-row{
-flex-direction:column;
-gap:18px;
-}
-
-}
-
-</style>
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="quote-box">
+    <div class="quote-box">
 
-<div class="small-title">
-GET YOUR FREE ESTIMATE
-</div>
+        <div class="small-title">
+            GET YOUR FREE ESTIMATE
+        </div>
 
-<h2>Get a Quote</h2>
+        <h2>Get a Quote</h2>
 
-<form>
+        <form>
 
-<div class="form-row">
+            <div class="form-row">
 
-<div class="form-group">
-<label>Your name</label>
-<input type="text" placeholder="John Smith">
-</div>
+                <div class="form-group">
+                    <label>Your name</label>
+                    <input type="text" placeholder="John Smith">
+                </div>
 
-<div class="form-group">
-<label>Email</label>
-<input type="email" placeholder="e.g. john@youremail.com">
-</div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="e.g. john@youremail.com">
+                </div>
 
-</div>
+            </div>
 
-<div class="form-row">
+            <div class="form-row">
 
-<div class="form-group">
-<label>Phone</label>
-<input type="text" placeholder="e.g. (1) 23 4567 891">
-</div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" placeholder="e.g. (1) 23 4567 891">
+                </div>
 
-<div class="form-group">
-<label>Total square footage</label>
-<input type="text" placeholder="e.g. 120">
-</div>
+                <div class="form-group">
+                    <label>Total square footage</label>
+                    <input type="text" placeholder="e.g. 120">
+                </div>
 
-</div>
+            </div>
 
-<div class="form-group">
+            <div class="form-group">
 
-<label>Choose a service</label>
+                <label>Choose a service</label>
 
-<select>
-<option>Select</option>
-<option>House Cleaning</option>
-<option>Office Cleaning</option>
-<option>Deep Cleaning</option>
-<option>Move In / Out Cleaning</option>
-</select>
+                <select>
+                    <option>Select</option>
+                    <option>House Cleaning</option>
+                    <option>Office Cleaning</option>
+                    <option>Deep Cleaning</option>
+                    <option>Move In / Out Cleaning</option>
+                </select>
 
-</div>
+            </div>
 
-<div class="agree-text">
-☑ By submitting this form, you agree to the processing of your personal data in accordance with the General Data Protection Regulation and our Privacy Policy.
-</div>
+            <div class="agree-text">
+                ☑ By submitting this form, you agree to the processing of your personal data in accordance with the
+                General Data Protection Regulation and our Privacy Policy.
+            </div>
 
-<button>
-I'd Like a Quote
-</button>
+            <button>
+                I'd Like a Quote
+            </button>
 
-</form>
+        </form>
 
-</div>
+    </div>
 
 </body>
+
 </html>

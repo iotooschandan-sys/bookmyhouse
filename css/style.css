@@ -4737,7 +4737,7 @@ section.faq-section .container-fluid {
     margin: 0 auto;
         margin-bottom: 25px;
 }
-.location-card {
+/* .location-card {
     border: 1px solid #eee;
     border-radius: 14px;
     flex-direction: column;
@@ -4745,7 +4745,7 @@ section.faq-section .container-fluid {
     transition: 0.3s ease;
     cursor: pointer;
     padding: 0 10px 10px;
-}
+} */
     .location-card:hover{
       transform:translateY(-5px);
       box-shadow:0 8px 18px rgba(0,0,0,0.08);

@@ -656,6 +656,7 @@ section.form-wrap-section {
 @media(max-width:575px) {
     section {
         padding: 40px 0;
+        overflow: hidden !important;
     }
 
     .mobile.menu {
@@ -687,6 +688,10 @@ span.btn-text {
     padding: 6px 10px 6px 9px;
     font-size: 10px;
     font-weight: 500;
+}
+
+.footer-border{
+    border-right: none;
 }
 .locations {
     display: grid;
