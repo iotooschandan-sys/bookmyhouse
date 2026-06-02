@@ -658,7 +658,9 @@ section.form-wrap-section {
         padding: 40px 0;
         overflow: hidden !important;
     }
-
+.faq-section {
+    overflow: hidden !important;
+}
     .mobile.menu {
         display: block;
         border-bottom: 0.5px solid rgb(0 0 0 / 17%);
@@ -1460,7 +1462,7 @@ br.break1 {
     margin-top: -6px;
 }
 .whatsapp-btn {
-    padding: 10px 24px;
+    padding: 15px 24px;
     font-size: 14px;
 }
 .about {
