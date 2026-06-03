@@ -4900,13 +4900,14 @@ section.home-clean-sec {
     /* background: #f6f8f3; */
     border-radius: 42px;
     background-image: linear-gradient(180deg, #F4F6F0 0%, #FFFFFF 310px);
-    margin-top: 25px;
+    margin: 25px 15px 0;
 }
 
 .home-clean-wrap{
     display:flex;
     justify-content:space-between;
     gap:30px;
+    padding: 0 10px;
 }
 
 .home-clean-left{
@@ -4927,11 +4928,10 @@ section.home-clean-sec {
     margin-bottom:25px;
 }
 
-.home-clean-text{
+.home-clean-left p{
     font-size:20px;
     line-height:1.8;
     color: #09235C;
-    width: 62%;
 }
 
 .home-clean-btn{
@@ -5035,13 +5035,18 @@ backdrop-filter: blur(8px);
 }
 
 .clean-task-text{
-    color:#fff;
+    color:#fff !important;
     font-size:17px;
     line-height:1.8;
     max-width:700px;
     margin:0 auto 45px;
 }
 
+.clean-task-card h5 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 .clean-task-grid{
     display:flex;
     gap:30px;
@@ -5051,7 +5056,7 @@ backdrop-filter: blur(8px);
 .clean-task-card{
     background: #09235C;
     border-radius:24px;
-    padding:35px;
+    padding:30px;
     flex:1;
     text-align:left;
 }
