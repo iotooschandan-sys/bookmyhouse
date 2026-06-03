@@ -4896,10 +4896,11 @@ i.fa-solid.fa-check.f-check {
 
 
 
-
 section.home-clean-sec {
-    background: #09235C;
+    /* background: #f6f8f3; */
     border-radius: 42px;
+    background-image: linear-gradient(180deg, #F4F6F0 0%, #FFFFFF 310px);
+    margin-top: 25px;
 }
 
 .home-clean-wrap{
@@ -4917,7 +4918,7 @@ section.home-clean-sec {
     font-size: 13px;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #09235C;
 }
 
 .home-clean-title{
@@ -4929,12 +4930,12 @@ section.home-clean-sec {
 .home-clean-text{
     font-size:20px;
     line-height:1.8;
-    margin-bottom:35px;
-    color: #fff;
+    color: #09235C;
+    width: 62%;
 }
 
 .home-clean-btn{
-    margin-bottom:20px;
+    margin:20px 0 55px;
 }
 
 .home-clean-heading{
@@ -4943,7 +4944,7 @@ section.home-clean-sec {
 
 .home-clean-desc{
     font-size:18px;
-    color:#fff;
+    color:#09235C;
     line-height:1.8;
 }
 
@@ -4955,7 +4956,7 @@ section.home-clean-sec {
     margin: 35px 0;
 }
 .clean-task-sec {
-    margin-top: 90px;
+    margin-top: 65px;
 }
 
 .home-clean-imgbox{
@@ -4994,9 +4995,6 @@ linear-gradient(
 #08b8c8 100%
 );
 
-box-shadow:
-0 25px 50px rgba(0,0,0,0.18),
-inset 0 1px 0 rgba(255,255,255,0.25);
 
 backdrop-filter: blur(8px);
     border-radius:28px;
@@ -5019,7 +5017,7 @@ backdrop-filter: blur(8px);
     width:90px;
     height:90px;
     background: #fff;
-    border:3px solid #fff;
+    border: 2px solid #09235C;
     border-radius:25px;
     display:flex;
     align-items:center;
@@ -5088,7 +5086,7 @@ backdrop-filter: blur(8px);
 }
 
 .service-menu-box{
-    background:#e8e8e3;
+    background:#F4F6F0;
     border-radius:32px;
     padding:34px 50px;
 }
@@ -5118,16 +5116,27 @@ backdrop-filter: blur(8px);
     font-size: 18px;
     font-weight: 500;
     transition: 0.3s ease;
+    border: 1px solid #fff;
 }
 
 .service-menu-item:hover{
     transform:translateY(-2px);
+    border: 1px solid #09235C;
+    background: #09235c0a;
 }
 
-.service-menu-arrow{
-    color:#09235C;
-    font-size:28px;
-    font-weight:700;
+.service-menu-arrow {
+    color: #09235C;
+    font-size: 28px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.service-menu-arrow {
+    background: #fff;
 }
 
 .cleaning_card{
@@ -5209,7 +5218,7 @@ backdrop-filter: blur(8px);
 .eco_clean_content p {
     font-size: 18px;
     line-height: 2;
-    color: #fff;
+    color: #09235C ;
     margin-bottom: 28px;
 }
 
@@ -5295,6 +5304,7 @@ backdrop-filter: blur(8px);
 
 section.form-wrap-section {
    background-color: #fff;
+   padding-top: 0;
 }
 
 .service-testimonial .testimonial-swiper {
