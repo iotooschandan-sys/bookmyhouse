@@ -258,6 +258,17 @@ span.phone i {
   z-index: -1;
 }
 
+.bg-white1.btn-3d::before,
+.bg-white1.btn-3d::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #09235C;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
 /* left → middle */
 .btn-3d::before {
   left: 0;
@@ -1305,6 +1316,7 @@ img.google-icon {
 .cta-right .btn-3d::before, .cta-right .btn-3d::after {
     background: #fff;
 }
+
 /* Buttons */
 .btn {
   padding: 12px 26px;
@@ -4927,7 +4939,9 @@ section.home-clean-sec {
     font-weight:500;
     margin-bottom:25px;
 }
-
+.home-clean-short-desc {
+    width: 62%;
+}
 .home-clean-left p{
     font-size:20px;
     line-height:1.8;
@@ -5518,15 +5532,18 @@ margin-bottom:22px;
 flex:1;
 }
 
-label{
+.form-second label{
 display:block;
 font-size:14px;
 margin-bottom:10px;
-color:#333;
+color:#fff;
+}
+.form-second input::placeholder{
+color: #555;
 }
 
-input,
-select{
+.form-second input,
+.form-second select{
 
 width:100%;
 height:58px;
@@ -5553,7 +5570,15 @@ color:#555;
 .form-wrap-section .clean_wrap{
   margin-top: 0;
 }
-
+.all-sevice-btn {
+    margin-top: 34px;
+}
+.all-sevice-btn a {
+    width: 170px;
+}
+.all-sevice-btn i {
+    margin-left: 8px;
+}
 .clean_wrap {
     margin-top: 30px;
 }
@@ -5572,4 +5597,334 @@ color:#555;
     width: fit-content;
     position: absolute;
     top: -17px;
+}
+
+
+/* contact */
+
+.finance-contact-section {
+    background: #f5f5f5;
+    border-radius: 30px;
+}
+
+.finance-contact-header {
+    margin-bottom: 70px;
+}
+
+.finance-contact-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    border: 1px solid #d8d8d8;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #09235C;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.finance-contact-title {
+    font-size: 64px;
+    font-weight: 400;
+    color: #2f3f77;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.finance-contact-subtitle {
+    font-size: 24px;
+    color: #09235C;
+    margin-bottom: 0;
+}
+
+.finance-contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.finance-contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #09235C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finance-contact-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.finance-contact-content {
+    margin-left: 20px;
+}
+
+.finance-contact-content h5 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #09235C;
+    margin-bottom: 10px;
+}
+
+.finance-contact-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0;
+}
+.cont-add .col-lg-4 {
+    justify-content: center;
+    display: flex;
+}
+
+.finance-contact-icon .fas.fa-phone-alt {
+    transform: rotate(100deg);
+}
+
+.form-right-bg{
+    background: url('../img/cont-form.webp');
+}
+
+.form-right-bg {
+    background: url('../img/cont-form.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 106%;
+    margin-left: -42px;
+    border-radius: 0 35px 35px 0;
+}
+.cont-spance .col-md-6{
+  padding: 0;
+}
+
+.row.cont-spance {
+    padding: 0 10px;
+}
+.contact-form1 {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+/* contact */
+
+
+.global-office-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: #32427a;
+    margin-bottom: 40px;
+}
+
+.office-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 28px;
+    padding: 40px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.office-card-dark {
+    background: #32427a;
+    color: #fff;
+    border: none;
+}
+
+.office-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.office-light-badge {
+    border-color: #d7d7d7;
+    color: #09235C;
+}
+
+.office-card h3 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #09235C;
+}
+.crd-height{
+  height: 100%;
+}
+
+.office-card h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.office-card p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+
+.office-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.office-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.office-contact-list i {
+    width: 24px;
+    height: 24px;
+    background: #09235C;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.office-direction {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.dark-link {
+    color: #222;
+}
+
+.office-direction span {
+    width: 24px;
+    height: 24px;
+    background: #2caac1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.office-direction span i {
+    font-size: 12px;
+    color: #09235C;
+    transform: rotate(45deg);
+}
+
+.office-shape {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #9ec3dd;
+    right: -90px;
+    bottom: -80px;
+    border-radius: 30px;
+    transform: rotate(-20deg);
+}
+
+
+
+
+.consultation-image-box {
+    height: 85%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.consultation-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.consultation-content-box {
+    background: #2caac1;
+    border-radius: 30px;
+    padding: 30px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.consultation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.consultation-badge {
+    border: 1px solid rgba(50, 66, 122, 0.2);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.consultation-star {
+    font-size: 28px;
+    color: #09235C;
+}
+
+.consultation-title {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 40px;
+    max-width: 400px;
+}
+.consultation-btn-wrapper {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.consultation-arrow {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: -5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #09235C;
+    text-decoration: none;
+}
+
+.consultation-arrow i {
+    font-size: 16px;
+}
+
+
+section.all-service {
+    padding-top: 30px;
+    background: #f7f9fb;
 }
