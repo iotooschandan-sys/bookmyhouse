@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book My House Maid Consultancy</title>
-    <link rel="stylesheet" href="css/style.css">
-     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-    <link rel="stylesheet" href="css/responsive.css">
-     <!-- <link rel="stylesheet" href="css/responsive.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+     <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+     <link rel="stylesheet" href="css/responsive.min.css">
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -699,243 +699,270 @@
 
                     <div class="col-lg-5">
                         <div class="position-relative">
+                    <form action="" id="maidForm">
+                    <!-- =========================
+                         PAGE 1
+                    ========================= -->
 
-                            <!-- =========================
-                                    PAGE 1
-                                ========================= -->
+                    <div class="main-box-form" id="page1">
+                        <h3 class="heading1">
+                            What Do You Want Your Maid To Do ? 
+                        </h3>
+                        <!-- DROPDOWN -->
+                        <div class="dropdown-wrapper">
 
-                            <div class="main-box-form" id="page1">
-                                <h3 class="heading1">
-                                    What Do You Want Your Maid To Do ?
-                                </h3>
-                                <!-- DROPDOWN -->
-                                <div class="dropdown-wrapper">
-                                    <div class="service-select d-flex justify-content-between align-items-center"
-                                        id="selectBox">
-                                        <div class="service-left">
-                                            <div class="service-icon" id="selectedIcon">
-                                                <img src="img/maid.png" alt="">
-                                            </div>
-                                            <h4 class="service-title" id="selectedText">
-                                                Maid
-                                            </h4>
-                                        </div>
-                                        <i class="fa-solid fa-chevron-down" id="arrow"></i>
+                            <!-- Hidden Select -->
+                            <select name="service" id="serviceSelect" hidden>
+                                <option value="Maid" selected>Maid</option>
+                                <option value="Cook">Cook</option>
+                                <option value="Baby Sitter">Baby Sitter</option>
+                                <option value="Baby Massage">Baby Massage</option>
+                            </select>
+
+                            <!-- Custom Dropdown -->
+                            <div class="service-select d-flex justify-content-between align-items-center"
+                                id="selectBox">
+                                <div class="service-left">
+                                    <div class="service-icon" id="selectedIcon">
+                                        <img src="img/maid.png" alt="">
                                     </div>
-
-                                    <!-- MENU -->
-                                    <div class="service-dropdown" id="dropdownMenu">
-                                        <div class="dropdown-item-custom active">
-                                            <div class="service-icon"><img src="img/maid.png" alt=""></div>
-                                            <h5>Maid</h5>
-                                        </div>
-                                        <div class="dropdown-item-custom">
-                                            <div class="service-icon"><img src="img/cook1.png" alt=""></div>
-                                            <h5>Cook</h5>
-
-                                        </div>
-
-                                        <div class="dropdown-item-custom">
-
-                                            <div class="service-icon"><img src="img/baby-sitter.png" alt=""></div>
-                                            <h5>Baby Sitter</h5>
-                                        </div>
-                                        <div class="dropdown-item-custom">
-                                            <div class="service-icon"><img src="img/baby-me.png" alt=""></div>
-                                            <h5>Baby Massage</h5>
-                                        </div>
-                                    </div>
+                                    <h4 class="service-title" id="selectedText">Maid</h4>
                                 </div>
-
-                                <!-- OPTIONS -->
-                                <div class="service-option d-flex justify-content-between align-items-center">
-                                    <div class="option-left">
-
-                                        <div class="service-icon"><img src="img/urgent.webp" alt=""></div>
-
-                                        <h4 class="option-title">
-                                            Urgent Need
-                                        </h4>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="service-option d-flex justify-content-between align-items-center">
-                                    <div class="option-left">
-                                        <div class="service-icon"><img src="img/need-later.webp" alt=""></div>
-                                        <h4 class="option-title">
-                                            Needed Later
-                                        </h4>
-                                    </div>
-
-                                </div>
-
-                                <div class="service-option d-flex justify-content-between align-items-center">
-                                    <div class="option-left">
-                                        <div class="service-icon"><img src="img/just-planing.webp" alt=""></div>
-                                        <h4 class="option-title">
-                                            I'm Just Planning
-                                        </h4>
-                                    </div>
-
-                                </div>
-
-                                <!-- NEXT -->
-
-                                <div class="text-center mt-4">
-
-                                    <button class="btn-3d w-100" id="nextBtn">
-                                        Next <i class="fa-solid fa-arrow-right ms-2"></i>
-                                    </button>
-
-                                </div>
-
+                                <i class="fa-solid fa-chevron-down" id="arrow"></i>
                             </div>
 
-
-
-                            <!-- =========================
-                                PAGE 2
-                            ========================= -->
-
-                            <div class="main-box-form d-none" id="page2">
-
-                                <h3 class="heading1">
-                                    Which Gender Do You Prefer?
-                                </h3>
-
-
-                                <div class="row g-3">
-
-                                    <div class="col-4">
-
-                                        <div class="gender-card">
-
-                                            <div class="gender-img">
-                                                👨
-                                            </div>
-
-                                            <h4>Male</h4>
-
-                                        </div>
-
+                            <div class="service-dropdown" id="dropdownMenu">
+                                <div class="dropdown-item-custom active" data-value="Maid">
+                                    <div class="service-icon">
+                                        <img src="img/maid.png" alt="">
                                     </div>
-
-
-                                    <div class="col-4">
-
-                                        <div class="gender-card active-gender">
-
-                                            <div class="gender-img">
-                                                👩
-                                            </div>
-
-                                            <h4>Female</h4>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="col-4">
-
-                                        <div class="gender-card">
-
-                                            <div class="gender-img">
-                                                👨‍👩
-                                            </div>
-
-                                            <h4>Any</h4>
-
-                                        </div>
-
-                                    </div>
-
+                                    <h5>Maid</h5>
                                 </div>
 
-
-                                <!-- BUTTONS -->
-
-                                <div class="text-center mt-4 d-flex justify-content-center gap-3">
-
-                                    <button class="btn-3d" id="prevBtn">
-                                        <i class="fa-solid fa-arrow-left"></i>Previous
-                                    </button>
-
-                                    <button class="btn-3d" id="genderNextBtn">
-                                        Next <i class="fa-solid fa-arrow-right ms-2"></i>
-                                    </button>
-
+                                <div class="dropdown-item-custom" data-value="Cook">
+                                    <div class="service-icon">
+                                        <img src="img/cook1.png" alt="">
+                                    </div>
+                                    <h5>Cook</h5>
                                 </div>
 
+                                <div class="dropdown-item-custom" data-value="Baby Sitter">
+                                    <div class="service-icon">
+                                        <img src="img/baby-sitter.png" alt="">
+                                    </div>
+                                    <h5>Baby Sitter</h5>
+                                </div>
+
+                                <div class="dropdown-item-custom" data-value="Baby Massage">
+                                    <div class="service-icon">
+                                        <img src="img/baby-me.png" alt="">
+                                    </div>
+                                    <h5>Baby Massage</h5>
+                                </div>
                             </div>
-
-                            <!-- =========================
-                                    PAGE 3
-                            ========================= -->
-
-                            <div class="main-box-form d-none" id="page3">
-
-                                <h3 class="heading1">
-                                    Tell Us Your Requirements
-                                </h3>
-
-                                <!-- NAME -->
-
-                                <div class="form-group-custom">
-                                    <input type="text" class="form-control custom-input" placeholder="Enter Name">
-                                </div>
-
-
-                                <!-- LOCATION -->
-
-                                <div class="form-group-custom">
-
-                                    <input type="text" class="form-control custom-input"
-                                        placeholder="Enter Your Location">
-
-                                </div>
-
-
-                                <!-- HOURS -->
-
-                                <div class="form-group-custom">
-
-                                    <input type="text" class="form-control custom-input"
-                                        placeholder="How many hours do you need">
-
-                                </div>
-
-
-                                <!-- MESSAGE -->
-
-                                <div class="form-group-custom">
-
-                                    <textarea rows="3" class="form-control custom-textarea"
-                                        placeholder="Enter Message"></textarea>
-
-                                </div>
-
-
-                                <!-- BUTTONS -->
-
-                                <div class="text-center mt-4 d-flex justify-content-center gap-3">
-
-                                    <button class="btn-3d" id="backBtn">
-                                        <i class="fa-solid fa-arrow-left"></i> Previous
-                                    </button>
-
-                                    <button class="btn-3d">
-                                        Submit <i class="fa-solid fa-paper-plane ms-2"></i>
-                                    </button>
-
-                                </div>
-
-                            </div>
-
 
                         </div>
+
+                        <!-- dropdown end -->
+                        <div class="service-options-group">
+                            <label class="service-option d-flex justify-content-between align-items-center">
+                                <input type="radio" name="requirement_type" value="Urgent Need" hidden>
+
+                                <div class="option-left">
+                                    <div class="service-icon">
+                                        <img src="img/urgent.webp" alt="">
+                                    </div>
+
+                                    <h4 class="option-title">
+                                        Urgent Need
+                                    </h4>
+                                </div>
+                            </label>
+
+                            <label class="service-option d-flex justify-content-between align-items-center">
+                                <input type="radio" name="requirement_type" value="Needed Later" hidden>
+
+                                <div class="option-left">
+                                    <div class="service-icon">
+                                        <img src="img/need-later.webp" alt="">
+                                    </div>
+
+                                    <h4 class="option-title">
+                                        Needed Later
+                                    </h4>
+                                </div>
+                            </label>
+
+                            <label class="service-option d-flex justify-content-between align-items-center">
+                                <input type="radio" name="requirement_type" value="I'm Just Planning" hidden>
+
+                                <div class="option-left">
+                                    <div class="service-icon">
+                                        <img src="img/just-planing.webp" alt="">
+                                    </div>
+
+                                    <h4 class="option-title">
+                                        I'm Just Planning
+                                    </h4>
+                                </div>
+                            </label>
+                        </div>
+                        <!-- NEXT -->
+
+                        <div class="text-center mt-4">
+
+                            <button type="button" class="btn-3d w-100" id="nextBtn">
+                                Next <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =========================
+                             PAGE 2
+                     ========================= -->
+                    <div class="main-box-form d-none" id="page2">
+
+                        <h3 class="heading1">
+                            Which Gender Do You Prefer?
+                        </h3>
+
+                        <div class="row g-3">
+
+                            <div class="col-4">
+
+                                <label for="" class="gender-card">
+                                    <input type="radio" id="" name="gender" value="Male">
+                                    <div>
+                                        <div class="gender-img">
+                                            👨
+                                        </div>
+
+                                        <h4>Male</h4>
+                                    </div>
+                                </label>
+
+                            </div>
+
+
+                            <div class="col-4">
+
+                            <label for="" class="gender-card active-gender">
+                                <input type="radio" id="" name="gender" value="Female">
+                                <div>
+                                    <div class="gender-img">
+                                        👩
+                                    </div>
+
+                                    <h4>Female</h4>
+                                </div>
+                            </label>
+
+                            </div>
+
+
+                            <div class="col-4">
+                                <label for="" class="gender-card">
+                                    <input type="radio" id="" name="gender" value="Any">
+                                    <div>
+                                        <div class="gender-img">
+                                            👨‍👩
+                                        </div>
+
+                                        <h4>Any</h4>
+                                    </div>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="text-center mt-4 d-flex justify-content-center gap-3">
+
+                            <button type="button" class="btn-3d" id="prevBtn">
+                                <i class="fa-solid fa-arrow-left"></i>Previous
+                            </button>
+
+                            <button type="button" class="btn-3d" id="genderNextBtn">
+                                Next <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =========================
+                                    PAGE 3
+                    ========================= -->
+                    <div class="main-box-form d-none" id="page3">
+
+                        <h3 class="heading1">
+                            Tell Us Your Requirements
+                        </h3>
+
+                        <!-- NAME -->
+                        <div id="maidForm11">
+
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="service" id="serviceInput">
+                        <input type="hidden" name="urgency" id="urgencyInput">
+                        <input type="hidden" name="gender" id="genderInput">
+
+                        <!-- Name -->
+                        <div class="form-group-custom">
+                            <input type="text"
+                                class="form-control custom-input"
+                                name="name"
+                                placeholder="Enter Name"
+                                required>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="form-group-custom">
+                            <input type="text"
+                                class="form-control custom-input"
+                                name="location"
+                                placeholder="Enter Your Location"
+                                required>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="form-group-custom">
+                            <input type="text"
+                                class="form-control custom-input"
+                                name="hours"
+                                placeholder="How many hours do you need">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group-custom">
+                            <textarea rows="3"
+                                    class="form-control custom-textarea"
+                                    name="message"
+                                    placeholder="Enter Message"></textarea>
+                        </div>
+
+                        <div class="text-center mt-4 d-flex justify-content-center gap-3">
+
+                            <button class="btn-3d" id="backBtn" type="button">
+                                Previous
+                            </button>
+
+                            <button type="submit"  class="btn-3d">
+                                Submit
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div id="responseMessage"></div>
+                    </div>
+                    </form>
+                        </div>
+                        <div id="responseMessage"></div>
                     </div>
                 </div>
             </div>
@@ -1078,127 +1105,151 @@
                     <!-- Card -->
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-broom"></i>
-                                <span>House Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-broom"></i>
+                                    <span>Maid</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/off.jpg" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-building"></i>
-                                <span>Office Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/off.jpg" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>Cook</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/windo.jpg" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-window-maximize"></i>
-                                <span>Windows Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/windo.jpg" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-window-maximize"></i>
+                                    <span>Baby Sitter</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/plumb.jfif" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-wrench"></i>
-                                <span>Plumbing Service</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/plumb.jfif" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-wrench"></i>
+                                    <span>Baby Massage</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/outd.jpg" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-tree"></i>
-                                <span>Outdoor Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/outd.jpg" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-tree"></i>
+                                    <span>Patient Care</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/fix.avif" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                                <span>House Fixing</span>
-                            </div>
+                            <a href="">
+                                <img src="img/fix.avif" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    <span>Elder Care</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/bath.avif" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-bath"></i>
-                                <span>Bathtub Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/bath.avif" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <span>Driver</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/indo.avif" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-house"></i>
-                                <span>Indoor Cleaning</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/indo.avif" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span>Nursing</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/maid.jpg" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-broom"></i>
-                                <span>Maid</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/maid.jpg" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-broom"></i>
+                                    <span>Japa Maid</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/cook.webp" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-utensils"></i>
-                                <span>Cook</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/cook.webp" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <span>Delivery</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/nursing.jpg" alt="">
-                            <div class="card-content">
-                                <i class="fa-solid fa-user-nurse"></i>
-                                <span>Nursing</span>
-                            </div>
+                            <a href="service.html">
+                                <img src="img/nursing.jpg" alt="">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-user-nurse"></i>
+                                    <span>Security Guard</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="service-card">
-                            <img src="img/driver.jpg" alt="">
+                           <a href="service.html">
+                             <img src="img/driver.jpg" alt="">
                             <div class="card-content">
                                 <i class="fa-solid fa-car"></i>
-                                <span>Driver</span>
+                                <span>Housekeeping</span>
                             </div>
+                           </a>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="all-sevice-btn"><a href="" class="btn-3d">View All <i class="fas fa-arrow-right"></i></a></div>
+                <div class="all-sevice-btn"><a href="service.html" class="btn-3d">View All <i class="fas fa-arrow-right"></i></a></div>
             </div>
         </section>
 
