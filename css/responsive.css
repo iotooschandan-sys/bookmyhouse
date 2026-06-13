@@ -1734,4 +1734,12 @@ section.consultation-section.py-0 {
 .main-box-form {
     margin-top: 63%;
 }
+
+}
+
+
+@media (min-width:300px) and (max-width:330px){
+    .about {
+    padding-top: 75%;
+}
 }

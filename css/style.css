@@ -182,7 +182,7 @@ span.phone i {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: #25D366;
+    background: #25D366 !important;
     color: white;
     padding: 15px 30px;
     border-radius: 10px;
@@ -191,12 +191,13 @@ span.phone i {
     font-weight: bold;
     transition: 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-weight: bold !important;
 }
 
     .whatsapp-btn:hover{
       background:#1ebe5d;
       transform:scale(1.05);
-      color: #fff !important;
+      color: #09235C !important;
     }
 
     .whatsapp-btn i{
@@ -220,7 +221,7 @@ span.phone i {
 
 
 /* Button */
-.btn-3d {
+.btn-3d, .whatsapp-btn {
     padding: 15px 30px;
     text-align: center;
     color: #fff;
@@ -259,9 +260,21 @@ span.phone i {
   transition: width 0.4s ease;
   z-index: -1;
 }
+.whatsapp-btn::before,
+.whatsapp-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transition: width 0.4s ease;
+  z-index: -1;
+  color: #000 !important;
+}
 
 /* left → middle */
-.btn-3d::before {
+.btn-3d::before, .whatsapp-btn::before {
   left: 0;
 }
 .btn-3d i {
@@ -269,13 +282,19 @@ span.phone i {
 }
 
 /* right → middle */
-.btn-3d::after {
+.btn-3d::after, .whatsapp-btn::after {
   right: 0;
 }
 
 /* hover */
 .btn-3d:hover::before,
 .btn-3d:hover::after {
+  width: 50%;
+}
+
+/* hover */
+.whatsapp-btn:hover::before,
+.whatsapp-btn:hover::after {
   width: 50%;
 }
 
@@ -2061,7 +2080,7 @@ body {
   top: 100%;
   left: 0;
   background: #fff;
-  border: 2px solid #0e0c0c;
+  border: 2px solid #e4e4e4b8;
   max-height: 260px;
   overflow-y: auto;
   z-index: 100;
@@ -5952,4 +5971,8 @@ color:#555;
 section.all-service {
     padding-top: 30px;
     background: #f7f9fb;
+}
+
+#dropdownMenu img {
+    width: 30px;
 }
