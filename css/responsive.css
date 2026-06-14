@@ -5,11 +5,29 @@
 .mobile-flex .btn-3d {
     background: #09235C;
 }
-
+a.nav-link.active.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     .navbar {
         padding: 20px 0;
         background: #fff;
     }
+
+    .offcanvas-body .dropdown-menu {
+            background-color: #09235C;
+        }
+
+        .offcanvas-body .dropdown-menu li a{
+            color: #fff !important;
+            font-size: 16px;
+        }
+
+        .menu li::after {
+   display: none;
+}
+        
 
     .offcanvas-header {
         padding: 1rem 1rem 0 !important;
@@ -69,6 +87,34 @@
         font-size: 14px;
         margin-left: 5px;
     }
+
+     .bd-heroh1 {
+                font-size: 42px;
+            }
+
+            .bd-hero-overlay {
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                top: auto;
+                padding: 30px;
+            }
+
+            .bd-content {
+                padding: 30px;
+            }
+
+            .content-section h2 {
+                font-size: 34px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bd-cta-box h3 {
+                font-size: 28px;
+            }
 }
 
 
@@ -250,7 +296,7 @@ a.whatsapp-btn.on-mb {
         bottom: 25px;
     }
 
-    .about .badge {
+    .about .badge1 {
         left: -26px;
         top: -3px;
         width: 98px;
@@ -338,7 +384,7 @@ a.whatsapp-btn.on-mb {
         top: -62px;
     }
 
-    .about .badge {
+    .about .badge1 {
         left: 5px;
         top: 4px;
     }
@@ -673,6 +719,9 @@ section.form-wrap-section {
 
 /* ==== Mobile Screen  */
 @media(max-width:575px) {
+        h2 {
+        font-size: 25px !important;
+    }
     section {
         padding: 40px 0;
         overflow: hidden;
@@ -680,21 +729,39 @@ section.form-wrap-section {
 .faq-section {
     overflow: hidden !important;
 }
+.home-clean-left p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+.bd-breadcrumb {
+    font-size: 14px;
+}
+.service-card img {
+    height: 180px;
+}
+.blog-card img {
+    height: auto;
+}
+.client-testimonial-card {
+    margin: 0px auto;
+}
     .mobile.menu {
         display: block;
         border-bottom: 0.5px solid rgb(0 0 0 / 17%);
         background: #fff;
     }
-
-    h2 {
-        font-size: 25px !important;
-    }
+    section.home-clean-sec {
+    margin: 25px 0px 0;
+}
 span.btn-text {
     font-size: 11px;
     color: #fff;
 }
 .cleaning_card {
     padding: 34px 20px;
+}
+.offcanvas-body .nav-item {
+    border-bottom: 1px solid #ffffff59;
 }
 .form-row {
     display: block;
@@ -789,16 +856,19 @@ section.faq-section .container-fluid {
     border-bottom: 1px solid #09235C;
 }
 .srv-allbtn {
-    grid-template-columns: 49% 51%;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
 }
 .record-head {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: bold;
 }
 .menu li a, .menu li {
     font-weight: 500;
 }
 .srv-allbtn .whatsapp-btn, .srv-allbtn .btn-card {
     height: 56px;
+    font-size: 15px;
 }
 .srv-allbtn .btn-3d {
     display: none;
@@ -1262,10 +1332,10 @@ br.break1 {
     }
 
     .about .text {
-        font-size: 10px;
+        font-size: 9px;
     }
 
-    .about .badge {
+    .about .badge1 {
         left: -6px;
         top: 5px;
         width: 106px;
@@ -1607,6 +1677,15 @@ br.break1 {
 
     .home-clean-wrap {
     display: block;
+    padding:0;
+}
+.clean-task-card {
+    padding: 28px 18px;
+}
+.clean-task-card li {
+    margin-bottom: 11px;
+    align-items: start;
+    font-size: 15px;
 }
 .home-clean-left {
     width: 100%;
@@ -1726,6 +1805,120 @@ section.consultation-section.py-0 {
 .service-title p {
     font-weight: 400;
 }
+.bd-heroh1 {
+                font-size: 28px;
+            }
+
+            .bd-hero{
+                padding: 40px 0 40px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .demo-btn {
+                padding: 10px 21px;
+            }
+
+            .bd-auther-img div img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .meta-item span {
+                font-size: 13px;
+            }
+
+            .meta-item {
+                padding-right: 5px;
+            }
+
+            .meta-item strong {
+                font-size: 12px;
+            }
+
+            .bd-hero-meta {
+                gap: 5px;
+                justify-content: center;
+            }
+
+            .bd-blog-wrapper {
+                padding: 5px 0 80px;
+            }
+
+            .bd-content {
+                padding: 15px;
+            }
+
+            .takeaway-box {
+                padding: 20px;
+            }
+
+            .content-section h2 {
+                font-size: 25px;
+            }
+
+            .content-section h3 {
+                font-size: 25px;
+            }
+
+            .content-section {
+                margin-bottom: 35px;
+            }
+            .content-section p {
+    font-size: 16px;
+}
+.blog-note-link {
+    font-size: 14px;
+}
+.client-testimonial-text {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+.client-quote-icon {
+    font-size: 70px;
+    margin-bottom: 18px;
+    height: 30px;
+}
+.client-author-name {
+    font-size: 18px;
+}
+.client-author-role {
+    font-size: 12px;
+}
+.blog-author-layout {
+    display: block;
+}
+.blog-author-description {
+    margin-top: 15px;
+}
+.blog-cta-content {
+    display: block;
+}
+.blog-cta-left {
+    width: 100%;
+        padding: 30px 20px;
+}
+.blog-cta-title {
+    font-size: 24px;
+    margin: 0 0 26px;
+}
+.blog-cta-right {
+    width: 100%;
+    padding: 0 20px 20px;
+}
+.blog-content h3 {
+    font-size: 20px;
+}
+            .content-acc .accordion-button {
+                font-size: 18px;
+            }
+
+            .related-top h2 {
+                font-size: 25px;
+            }
+
 
 }
 
@@ -1743,3 +1936,75 @@ section.consultation-section.py-0 {
     padding-top: 75%;
 }
 }
+
+
+        /* =========================
+RESPONSIVE
+========================= */
+
+        @media(max-width:1100px) {
+
+            .bd-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bd-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .bd-heroh1 {
+                font-size: 52px;
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .bd-heroh1 {
+                font-size: 42px;
+            }
+
+            .blog-grid {
+    flex-shrink: 0;
+    display: block;
+}
+
+            .bd-hero-overlay {
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                top: auto;
+                padding: 30px;
+            }
+
+            .bd-content {
+                padding: 0px;
+                margin-top: 30px;
+            }
+
+            .content-section h2 {
+                font-size: 34px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bd-cta-box h3 {
+                font-size: 28px;
+            }
+        }
+
+     
