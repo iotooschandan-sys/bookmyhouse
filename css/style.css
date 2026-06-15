@@ -4973,6 +4973,9 @@ i.fa-solid.fa-check.f-check {
     align-items: center;
 }
 
+.srv-allbtn .btn-3d, .srv-allbtn .whatsapp-btn {
+    height: stretch;
+}
 .srv-allbtn .whatsapp-btn {
     padding: 15px 17px;
     font-size: 12px;
