@@ -130,6 +130,15 @@ a.nav-link.active.dropdown-toggle {
         display: block;
     }
 
+    .bd-blog-wrapper {
+    padding: 0px 0 80px;
+}
+.bd-ctabox .cta-left {
+    width: 100%;
+}
+section.container-fluid.cta-section.pt-0.bd-ctabox {
+    padding: 40px 0;
+}
     .mobile-flex .btn-3d.mb-3d {
         padding: 10px 23px;
     }
@@ -733,6 +742,19 @@ section.form-wrap-section {
     font-size: 17px;
     line-height: 1.5;
 }
+.home-clean-btn {
+    margin: 20px 0 25px;
+}
+
+.bd-ctabox .cta-left {
+    width: 100%;
+}
+section.container-fluid.cta-section.pt-0.bd-ctabox {
+    padding: 0;
+}
+.clean-task-text {
+    margin: 0 auto 25px;
+}
 .bd-breadcrumb {
     font-size: 14px;
 }
@@ -1271,9 +1293,15 @@ br.break1 {
     }
 
     .btn-3d {
-        padding: 15px 24px;
+        padding: 12px 20px;
         font-size: 14px;
     }
+    .quote-box input, .quote-box select {
+    height: 45px;
+}
+.clean_img_box {
+    margin-top: 20px;
+}
 
     .flex-wrp {
         display: block;
@@ -1398,6 +1426,7 @@ br.break1 {
 }
 .hw-btn a {
     margin-bottom: 10px;
+    width: 200px;
 }
 .auto-btn {
     width: 167px;
@@ -1810,7 +1839,7 @@ section.consultation-section.py-0 {
             }
 
             .bd-hero{
-                padding: 40px 0 40px;
+                padding: 40px 0 0px;
             }
 
             .logo {
@@ -1840,7 +1869,7 @@ section.consultation-section.py-0 {
 
             .bd-hero-meta {
                 gap: 5px;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             .bd-blog-wrapper {
@@ -1978,7 +2007,11 @@ RESPONSIVE
 
             .blog-grid {
     flex-shrink: 0;
-    display: block;
+            display: flex;
+        flex-direction: column;
+}
+aside.bd-sidebar {
+    order: 2;
 }
 
             .bd-hero-overlay {

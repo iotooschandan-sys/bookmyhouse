@@ -4999,6 +4999,14 @@ section.home-clean-sec {
 	margin: 25px 15px 0;
 }
 
+.home-clean-sec,
+.container-fluid,
+.home-clean-wrap{
+    overflow: visible !important;
+}
+
+
+
 .home-clean-wrap{
     display:flex;
     justify-content:space-between;
@@ -5073,6 +5081,10 @@ section.home-clean-sec {
 .home-clean-imgbox{
     border-radius:35px;
     overflow:hidden;
+}
+.sticky-part {
+    position: sticky;
+    top: 165px;
 }
 
 .home-clean-imgbox img {
@@ -6816,7 +6828,7 @@ RELATED ARTICLES
 .recent-posts {
     background: #fff;
     padding: 20px;
-    border: 1px solid #00000029;
+    border: 1px solid #2626261f;
     border-radius: 24px;
 }
 .recent-posts h3 {
